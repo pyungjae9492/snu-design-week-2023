@@ -1,9 +1,11 @@
+import { MenuExplanation } from './fragments/MenuExplanation'
+
 export const WorksContainer = () => {
-    return (
-        <div>
-            웍스
-        </div>
-    )
+  return (
+    <div>
+      <MenuExplanation />
+    </div>
+  )
 }
 
 export default WorksContainer
