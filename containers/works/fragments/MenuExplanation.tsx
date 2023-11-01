@@ -1,7 +1,7 @@
 export const MenuExplanation = () => {
   return (
     <div>
-      <p>그래픽디자인프로젝트</p>
+      <p className="text-white">그래픽디자인프로젝트</p>
       <div>
         <p>지도교수 | 배민기</p>
         <p>Advisor | Bae Minkee</p>
