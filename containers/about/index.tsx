@@ -1,7 +1,13 @@
+import { ContentsSelection } from "@/components/ContentsSelection"
+import { AboutExplanation } from "./fragments/AboutExplanation"
+
 export const AboutContainer: React.FC = () => {
     return (
-        <div className="fixed w-screen h-screen bg-black">
-        </div>
+        <>
+            <AboutExplanation />
+
+            <ContentsSelection />
+        </>
     )
 }
 
