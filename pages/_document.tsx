@@ -2,6 +2,7 @@ import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 import { IconContext } from '@react-icons/all-files'
+import { PCHeader } from '@/components/Header/PCHeader'
 
 export default class MyDocument extends Document {
   render() {
@@ -61,6 +62,7 @@ export default class MyDocument extends Document {
 `
               }}
             />
+
             <Main />
 
             <NextScript />

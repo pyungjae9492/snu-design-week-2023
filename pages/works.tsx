@@ -1,6 +1,8 @@
 import * as React from 'react'
 
 import { PageHead } from '../components/PageHead'
+import { Layout } from '@/components/Layout'
+import WorksContainer from 'containers/works'
 
 export const WorksPage: React.FC = () => {
   const title = '웍스'
@@ -9,9 +11,9 @@ export const WorksPage: React.FC = () => {
     <>
       <PageHead title={title} />
 
-      <div>
-        <h1>웍스</h1>
-      </div>
+      <Layout>
+        <WorksContainer />
+      </Layout>
     </>
   )
 }

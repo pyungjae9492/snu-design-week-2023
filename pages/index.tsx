@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { PageHead } from '../components/PageHead'
 import HomeContainer from 'containers/home'
+import { Layout } from '@/components/Layout'
 
 export const HomePage: React.FC = () => {
   const title = '홈'
@@ -10,7 +11,9 @@ export const HomePage: React.FC = () => {
     <>
       <PageHead title={title} />
 
-      <HomeContainer />
+      <Layout>
+        <HomeContainer />
+      </Layout>
     </>
   )
 }

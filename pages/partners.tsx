@@ -1,6 +1,8 @@
 import * as React from 'react'
 
-import { PageHead } from '../components/PageHead'
+import { PageHead } from 'components/PageHead'
+import { Layout } from 'components/Layout'
+import PartnersContainer from 'containers/partners'
 
 export const PartnersPage: React.FC = () => {
   const title = '파트너스'
@@ -9,9 +11,9 @@ export const PartnersPage: React.FC = () => {
     <>
       <PageHead title={title} />
 
-      <div>
-        <h1>파트너스</h1>
-      </div>
+      <Layout>
+        <PartnersContainer />
+      </Layout>
     </>
   )
 }
