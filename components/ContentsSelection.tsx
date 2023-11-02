@@ -1,44 +1,29 @@
 import React, { useState } from "react";
 
-export const ContentsSelection = () => {
-    const [selected, setSelected] = useState("Visual Identity");
+export const ContentsSelection = ({ headingList, contentsByHeading }) => {
+    const [selected, setSelected] = useState(0);
 
     return (
-        <>
-            <div className="flex flex-row gap-[5vw] justify-center">
-                <div onClick={() => setSelected("Visual Identity")}>
-                    <p className="text-white">Visual Identity</p>
+    <>
+        <div className="flex flex-row gap-[5vw] justify-center">
+            {headingList.map((heading:string, index:number) => (
+                <div key={index} onClick={() => setSelected(index)}>
+                    <p className="text-white cursor-pointer whitespace-pre-wrap">{heading}</p>
                 </div>
-                <div onClick={() => setSelected("Preperation Comittee")}>
-                    <p className="text-white">SNU DESIGN WEEK 2023<br/>Preperation Comittee</p>
-                </div>
-                <div onClick={() => setSelected("Exhibition Participants")}>
-                    <p className="text-white">Exhibition<br/>Participants</p>
-                </div>
-                <div onClick={() => setSelected("Thanks To")}>
-                    <p className="text-white">Thanks To</p>
-                </div>
-            </div>
+            ))}
+        </div>
 
-            <div>
-                {selected === "Visual Identity" ? (
-                    <div className="flex flex-row justify-center">
-                        <p className="text-white">Visual Identity</p>
+        <div>
+            {contentsByHeading.map((content:string, index:number) => (
+                selected === index ? (
+                    <div className="flex flex-row justify-center" key={index}>
+                    <p className="text-white">{content}</p>
                     </div>
-                ) : selected === "Preperation Comittee" ? (
-                    <div className="flex flex-row justify-center">
-                        <p className="text-white">SNU DESIGN WEEK 2023<br/>Preperation Comittee</p>
-                    </div>
-                ) : selected === "Exhibition Participants" ? (
-                    <div className="flex flex-row justify-center">
-                        <p className="text-white">Exhibition<br/>Participants</p>
-                    </div>
-                ) : selected === "Thanks To" ? (
-                    <div className="flex flex-row justify-center">
-                        <p className="text-white">Thanks To</p>
-                    </div>
-                ) : null}
-            </div>
-        </>
+                ) : null
+            ))}
+        </div>
+    </>
     );
-}
+};
+
+export default ContentsSelection;
