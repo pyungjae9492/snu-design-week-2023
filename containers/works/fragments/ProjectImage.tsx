@@ -1,14 +1,12 @@
 import Image from 'next/image'
+import React from 'react'
+
 import projectcover from 'public/projectcover.png'
 
 export const ProjectImage = () => {
   return (
-    <div className='flex justify-center items-center'>
-      <Image
-        src={projectcover}
-        className='aspect-video'
-        width={global.innerWidth * 0.3}
-      />
+    <div className='relative aspect-video'>
+      <Image src={projectcover} />
     </div>
   )
 }

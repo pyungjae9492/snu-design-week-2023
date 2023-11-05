@@ -1,8 +1,8 @@
 export const MenuExplanation = () => {
   return (
-    <div className='flex-col w-[25%] fixed bottom-16 left-16 mr-20'>
-      <p className='text-3xl mb-6'>그래픽디자인프로젝트</p>
-      <div className='text-sm leading-7 mb-6'>
+    <div className='flex flex-col my-6'>
+      <p className='text-3xl font-medium mb-3 lg:mb-6'>그래픽디자인프로젝트</p>
+      <div className='text-sm leading-7 mb-3 lg:mb-6 '>
         <p>지도교수 | 배민기</p>
         <p>Advisor | Bae Minkee</p>
       </div>
