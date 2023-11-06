@@ -24,7 +24,7 @@ export const MobileHeader = () => {
 
     return (
         <>
-            <div className="fixed top-0 p-10 w-full flex md:hidden flex-row justify-end z-50">
+            <div className="fixed top-0 p-10 w-full flex lg:hidden flex-row justify-end z-50">
                 <button 
                     className="text-white"
                     onClick={onClickMenuButton}

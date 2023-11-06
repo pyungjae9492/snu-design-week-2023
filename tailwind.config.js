@@ -6,8 +6,11 @@ module.exports = {
     './containers/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    screens: {
+      sm: { min: '390px', max: '1200px' },
+      lg: { min: '1200px', max: '1600px' }
+    },
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
-
