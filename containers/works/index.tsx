@@ -20,7 +20,7 @@ export const WorksContainer = () => {
               src={ellipse}
               width={30}
               height={30}
-              className='hidden lg:block'
+              className='invisible lg:visible'
             />
             <div className='text-5xl'>GRAPHIC</div>
           </div>
