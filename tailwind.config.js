@@ -10,7 +10,12 @@ module.exports = {
       sm: { min: '500px', max: '1200px' },
       lg: { min: '1200px', max: '1600px' }
     },
-    extend: {}
+    extend: {
+      fontFamily:{
+        'snu-regular': ['SNUDESIGNWEEK2023-Regular'],
+        'snu-alter': ['SNUDESIGNWEEK2023-Alter']
+      },
+    },
   },
   plugins: []
 }
