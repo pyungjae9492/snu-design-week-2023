@@ -25,6 +25,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Pretendard-Regular', var(--notion-font);
 }
 
 a {
@@ -46,7 +47,6 @@ body {
   font-family: var(--notion-font);
   color: #fff;
   overflow-x: hidden;
-  font-family: 'Pretendard-Regular', var(--notion-font);
 }
 
 #__next {
