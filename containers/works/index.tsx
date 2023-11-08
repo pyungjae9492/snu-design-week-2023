@@ -11,20 +11,26 @@ export const WorksContainer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className='w-full h-screen flex-col lg:flex-row'>
-      <div className='max-h-screen flex-col lg:flex lg:flex-row lg:justify-between mx-6'>
-        <div className='flex flex-col lg:justify-between lg:max-w-[30%] lg:mr-12'>
-          <div className='flex flex-col lg:flex-row items-center gap-10'>
-            <Image src={ellipse} width={30} height={30} />
+    <div className='w-full h-max flex-col lg:flex-row'>
+      <div className='max-h-screen flex-col mx-6 lg:flex lg:flex-row lg:justify-between'>
+        {/*메뉴와 메뉴 설명*/}
+        <div className='flex flex-col lg:justify-between lg:mr-12'>
+          <div className='flex flex-col items-center gap-10 lg:flex-row '>
+            <Image
+              src={ellipse}
+              width={30}
+              height={30}
+              className='invisible lg:visible'
+            />
             <div className='text-5xl'>GRAPHIC</div>
           </div>
-          <div>{!isMenuOpen && <MenuExplanation />}</div>
+          <div className='lg:ml-16 lg:mb-10'>
+            {!isMenuOpen && <MenuExplanation />}
+          </div>
         </div>
-
-        <div className='overflow-auto'>
-          <div className='flex flex-wrap flex-col items-center lg:grid lg:grid-cols-2 gap-5'>
-            <ProjectImage />
-            <ProjectImage />
+        {/*작품들*/}
+        <div className='overflow-y-auto lg:justify-stretch lg:min-w-[60%]'>
+          <div className='flex flex-wrap flex-col items-center gap-5 lg:grid lg:grid-cols-2'>
             <ProjectImage />
             <ProjectImage />
             <ProjectImage />

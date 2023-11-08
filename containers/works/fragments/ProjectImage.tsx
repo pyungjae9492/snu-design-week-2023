@@ -5,8 +5,8 @@ import projectcover from 'public/projectcover.png'
 
 export const ProjectImage = () => {
   return (
-    <div className='relative aspect-video'>
-      <Image src={projectcover} />
+    <div className='w-full'>
+      <Image src={projectcover} layout='responsive' />
     </div>
   )
 }
