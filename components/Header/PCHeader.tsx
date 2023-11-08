@@ -21,7 +21,7 @@ export const PCHeader = () => {
         const lottieRef = useRef(null)
         const [isPlaying, setIsPlaying] = useState(false)
 
-        let lottieJson = 
+        const lottieJson = 
             pageName === "Home" ? homeAnimation : 
             pageName === "About" ? aboutAnimation :
             pageName === "Works" ? worksAnimation :
