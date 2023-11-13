@@ -1,6 +1,11 @@
 import { ProgramExplanation } from './fragments/ProgramExplanation'
 import { ContentsSelection } from '@/components/ContentsSelection'
 
+import { OpeningDay } from './fragments/OpeningDay'
+import { Workshop } from './fragments/Workshop'
+import { TalkConcert } from './fragments/TalkConcert'
+import { HomecomingDay } from './fragments/HomecomingDay'
+
 export const ProgramContainer: React.FC = () => {
     return (
         <>
@@ -8,7 +13,7 @@ export const ProgramContainer: React.FC = () => {
 
             <ContentsSelection 
                 headingList={["Opening Day", "Workshop", "Talk Concert", "Homecoming Day"]}
-                contentsByHeading={["Content1 - Opening Day", "Content2 - Workshop", "Content3 - Talk Concert", "Content4 - Homecoming Day"]}
+                contentsByHeading={[OpeningDay, Workshop, TalkConcert, HomecomingDay]}
             />
         </>
     )
