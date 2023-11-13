@@ -72,6 +72,7 @@ export const PreparationComittee = () => {
             <PreparationComitteeComponent team={team10} teamExplain={teamExplain10} teamMates={teamMates10} />
             <PreparationComitteeComponent team={team11} teamExplain={teamExplain11} teamMates={teamMates11} />
             <PreparationComitteeComponent team={team12} teamExplain={teamExplain12} teamMates={teamMates12} />
+            <div className="mb-[268.5px]"></div>
         </div>
     );
 }
