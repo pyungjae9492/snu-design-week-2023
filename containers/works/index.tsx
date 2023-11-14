@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
+import { is } from 'date-fns/locale'
 import ellipse from 'public/ellipse.png'
 
 import MenuBar from './fragments/MenuBar'
