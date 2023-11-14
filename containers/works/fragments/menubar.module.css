@@ -1,0 +1,190 @@
+.circle {
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  background: transparent;
+  /* border: 1px solid #fff; */
+  position: relative;
+  top: -600px;
+  left: -900px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(var(--angle)) translateX(var(--x));
+    opacity: 1;
+  }
+}
+
+.all,
+.brand,
+.uxui,
+.media,
+.graphic,
+.product,
+.living,
+.mobility,
+.space {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-left: 50%;
+  transform-origin: center left;
+  animation: move 2s linear forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  --x: 0px;
+  --y: 0;
+}
+.all {
+  padding-left: 0px;
+  animation-delay: 0s;
+  --angle: 0deg;
+  --x: 50%;
+}
+.brand {
+  --angle: 7deg;
+}
+.uxui {
+  --angle: 14deg;
+}
+.media {
+  --angle: 21deg;
+}
+.graphic {
+  --angle: 28deg;
+}
+.product {
+  width: 110%;
+  --angle: 35deg;
+}
+.living {
+  --angle: 42deg;
+}
+.mobility {
+  --angle: 49deg;
+}
+.space {
+  --angle: 56deg;
+}
+
+@keyframes moveselected {
+  0% {
+    transform: translateX(var(--x));
+  }
+  100% {
+    transform: rotate(var(--angle));
+  }
+}
+.allselected,
+.brandselected,
+.uxuiselected,
+.mediaselected,
+.graphicselected,
+.productselected,
+.livingselected,
+.mobilityselected,
+.spaceselected {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-left: 50%;
+  transform-origin: center left;
+  animation: moveselected 2s linear forwards;
+  animation-direction: reverse;
+  --x: -300px;
+}
+.allselected {
+  --angle: 0deg;
+}
+.brandselected {
+  --angle: 7deg;
+}
+.uxuiselected {
+  --angle: 14deg;
+}
+.mediaselected {
+  --angle: 21deg;
+}
+.graphicselected {
+  --angle: 28deg;
+}
+.productselected {
+  width: 110%;
+  --angle: 35deg;
+}
+.livingselected {
+  --angle: 42deg;
+}
+.mobilityselected {
+  --angle: 49deg;
+}
+.spaceselected {
+  --angle: 56deg;
+}
+
+@keyframes movereverse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(var(--angle));
+    opacity: 1;
+  }
+}
+.allreverse,
+.brandreverse,
+.uxuireverse,
+.mediareverse,
+.graphicreverse,
+.productreverse,
+.livingreverse,
+.mobilityreverse,
+.spacereverse {
+  --origin: 0;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-left: 50%;
+  transform-origin: center left;
+  animation: movereverse 1s linear forwards;
+  animation-direction: reverse;
+}
+.allreverse {
+  --angle: 0deg;
+}
+.brandreverse {
+  --angle: 7deg;
+}
+.uxuireverse {
+  --angle: 14deg;
+}
+.mediareverse {
+  --angle: 21deg;
+}
+.graphicreverse {
+  --angle: 28deg;
+}
+.productreverse {
+  width: 110%;
+  --angle: 35deg;
+}
+.livingreverse {
+  --angle: 42deg;
+}
+.mobilityreverse {
+  --angle: 49deg;
+}
+.spacereverse {
+  --angle: 56deg;
+}
