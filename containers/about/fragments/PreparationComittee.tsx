@@ -1,4 +1,6 @@
-const team1 = "졸업주간 준비위원회";
+// TODO: | 다음에 gap(or margin) 19px 주기, 팀원 이름 밑으로 내려갈 때 들여쓰기
+
+const team1 = "2023 졸업주간 준비위원회";
 const teamExplain1 = "졸업주간 준비위원회는 SNU DESIGN WEEK 2023의 기획과 운영을 담당하는 학생 위원회로, 총 33명의 디자인과 학생들로 구성되어 있습니다. 졸업주간 준비위원회는 서로에게 긍정적인 영향을 줄 수 있는 건강하고 평등한 조직을 지향합니다.";
 const teamMates1 = "졸업주간 준비위원장 | 금민정\n산업디자인 부위원장 | 김가은\n시각디자인 부위원장 | 김수현";
 
@@ -46,12 +48,16 @@ const team12 = "텀블벅팀";
 const teamExplain12 = "텀블벅을 통해 행사를 홍보하고, 불필요한 포장과 접착제를 최소화하며 후원자들에게 안전하게 리워드를 전달했습니다.";
 const teamMates12 = "팀장 | 김은주";
 
-const PreparationComitteeComponent: React.FC<{team: string, teamExplain: string, teamMates: string}> = ({team, teamExplain, teamMates}) => {
+const PreparationComitteeComponent: React.FC<{num:number, team: string, teamExplain: string, teamMates: string}> = ({num, team, teamExplain, teamMates}) => {
     return (
-        <div className="text-[30px] font-normal leading-[40px] tracking-[-1.5px] mt-[32px]">{team}
-            <div className="flex flex-row gap-[80px] mt-[32px]">
-                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line">{teamExplain}</p>
-                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line">{teamMates}</p>
+        <div className="text-[30px] font-normal leading-[40px] tracking-[-1.5px] mt-[32px] sm:text-[20px] sm:font-medium sm:leading-[30px] sm:tracking-normal sm:mt-0 sm:mb-[50px]">
+            {num !== 0 && <span className=" text-[#FFF] font-medium lg:hidden">{num}. </span>}{team}
+            <div className="flex flex-row gap-[80px] mt-[32px] sm:flex-col sm:mt-[24px] sm:gap-[40px]">
+                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line sm:hidden">{teamExplain}</p>
+                {num === 0 && 
+                    <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line sm:font-medium sm:w-full lg:hidden">{teamExplain}</p>
+                }
+                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line sm:font-medium sm:w-full">{teamMates}</p>
             </div>
         </div>
     );
@@ -59,20 +65,20 @@ const PreparationComitteeComponent: React.FC<{team: string, teamExplain: string,
 
 export const PreparationComittee = () => {
     return (
-        <div className="flex flex-col mt-[64px]">
-            <PreparationComitteeComponent team={team1} teamExplain={teamExplain1} teamMates={teamMates1} />
-            <PreparationComitteeComponent team={team2} teamExplain={teamExplain2} teamMates={teamMates2} />
-            <PreparationComitteeComponent team={team3} teamExplain={teamExplain3} teamMates={teamMates3} />
-            <PreparationComitteeComponent team={team4} teamExplain={teamExplain4} teamMates={teamMates4} />
-            <PreparationComitteeComponent team={team5} teamExplain={teamExplain5} teamMates={teamMates5} />
-            <PreparationComitteeComponent team={team6} teamExplain={teamExplain6} teamMates={teamMates6} />
-            <PreparationComitteeComponent team={team7} teamExplain={teamExplain7} teamMates={teamMates7} />
-            <PreparationComitteeComponent team={team8} teamExplain={teamExplain8} teamMates={teamMates8} />
-            <PreparationComitteeComponent team={team9} teamExplain={teamExplain9} teamMates={teamMates9} />
-            <PreparationComitteeComponent team={team10} teamExplain={teamExplain10} teamMates={teamMates10} />
-            <PreparationComitteeComponent team={team11} teamExplain={teamExplain11} teamMates={teamMates11} />
-            <PreparationComitteeComponent team={team12} teamExplain={teamExplain12} teamMates={teamMates12} />
-            <div className="mb-[268.5px]"></div>
+        <div className="flex flex-col mt-[64px] sm:mt-[140px]">
+            <PreparationComitteeComponent num={0} team={team1} teamExplain={teamExplain1} teamMates={teamMates1} />
+            <PreparationComitteeComponent num={1} team={team2} teamExplain={teamExplain2} teamMates={teamMates2} />
+            <PreparationComitteeComponent num={2} team={team3} teamExplain={teamExplain3} teamMates={teamMates3} />
+            <PreparationComitteeComponent num={3} team={team4} teamExplain={teamExplain4} teamMates={teamMates4} />
+            <PreparationComitteeComponent num={4} team={team5} teamExplain={teamExplain5} teamMates={teamMates5} />
+            <PreparationComitteeComponent num={5} team={team6} teamExplain={teamExplain6} teamMates={teamMates6} />
+            <PreparationComitteeComponent num={6} team={team7} teamExplain={teamExplain7} teamMates={teamMates7} />
+            <PreparationComitteeComponent num={7} team={team8} teamExplain={teamExplain8} teamMates={teamMates8} />
+            <PreparationComitteeComponent num={8} team={team9} teamExplain={teamExplain9} teamMates={teamMates9} />
+            <PreparationComitteeComponent num={9} team={team10} teamExplain={teamExplain10} teamMates={teamMates10} />
+            <PreparationComitteeComponent num={10} team={team11} teamExplain={teamExplain11} teamMates={teamMates11} />
+            <PreparationComitteeComponent num={11} team={team12} teamExplain={teamExplain12} teamMates={teamMates12} />
+            <div className="mb-[268.5px] sm:mb-[187px]"></div>
         </div>
     );
 }

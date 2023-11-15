@@ -1,17 +1,21 @@
+ // TODO: heightByElementSize에 sm일 때 height 적용
+
+import { useRouter } from "next/router";
 import React, { useState, useRef } from "react";
 
 export const ContentsSelection = ({ headingList, contentsByHeading }) => {
+    const router = useRouter();
+
     const [selectedIndex, setSelectedIndex] = useState(0);
     const wholeContentsRef = useRef([]); // for calculating height of each contents
-    const heightByElementSize = wholeContentsRef.current[selectedIndex] ? { height: wholeContentsRef.current[selectedIndex].offsetHeight} : { height: 3000 };
+    const heightByElementSize = wholeContentsRef.current[selectedIndex] ? { height: wholeContentsRef.current[selectedIndex].offsetHeight} : router.pathname === "/about" ? { height: "3000px" } : { height: "1500px" };
 
     return (
     <>  
-        <div className="flex flex-row w-[55%] justify-between ml-[22.5%] relative">
+        <div className="flex flex-row w-[55%] justify-between ml-[22.5%] relative sm:hidden">
             {headingList.map((heading:string, index:number) => (
                 <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => setSelectedIndex(index)}>
                     <div className="relative">
-
                         {index === 0 &&
                             <svg width="326" height="80" viewBox="0 0 326 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${selectedIndex == 0 ? "opacity-100" : "opacity-0"} left-2 bottom-2 absolute transition-opacity duration-500 ease-in-out`}>
                             <path d="M324.889 1.5L0.480469 78.2808" stroke="url(#paint0_linear_818_48836)" stroke-width="1.6555"/>
@@ -81,6 +85,49 @@ export const ContentsSelection = ({ headingList, contentsByHeading }) => {
             ))}
         </div> 
 
+        <div className="lg:hidden flex flex-col items-center relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="294" height="2" viewBox="0 0 294 2" fill="none" className="mb-[40px]">
+            <path d="M0 1H294" stroke="url(#paint0_linear_818_38651)" stroke-width="2"/>
+            <defs>
+            <linearGradient id="paint0_linear_818_38651" x1="1.31839" y1="1.50011" x2="300.592" y2="1.49947" gradientUnits="userSpaceOnUse">
+            <stop stop-opacity="0.546875"/>
+            <stop offset="0.5" stop-color="white"/>
+            <stop offset="1" stop-opacity="0"/>
+            </linearGradient>
+            </defs>
+            </svg>
+
+            <div className="relative w-full flex flex-row justify-center gap-[80px]">
+                {headingList.map((heading:string, index:number) => (
+                    <div key={index} className="flex flex-row items-center cursor-pointer" onClick={() => setSelectedIndex(index)}>
+                        {index === 0 &&
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none" className={`${selectedIndex == 0 ? "opacity-100" : "opacity-50"} transition-opacity duration-500 ease-in-out`}>
+                            <ellipse cx="8.07742" cy="8" rx="8.07742" ry="8" transform="matrix(1 0 0 -1 0 16)" fill="white"/>
+                            </svg>
+                        }
+                        {index === 1 &&
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none" className={`${selectedIndex == 1 ? "opacity-100" : "opacity-50"} transition-opacity duration-500 ease-in-out`}>
+                            <ellipse cx="8.07742" cy="8" rx="8.07742" ry="8" transform="matrix(1 0 0 -1 0 16)" fill="white"/>
+                            </svg>
+                        }
+                        {index === 2 &&
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none" className={`${selectedIndex == 2 ? "opacity-100" : "opacity-50"} transition-opacity duration-500 ease-in-out`}>
+                            <ellipse cx="8.07742" cy="8" rx="8.07742" ry="8" transform="matrix(1 0 0 -1 0 16)" fill="white"/>
+                            </svg>
+                        }
+                        {index === 3 &&
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none" className={`${selectedIndex == 3 ? "opacity-100" : "opacity-50"} transition-opacity duration-500 ease-in-out`}>
+                            <ellipse cx="8.07742" cy="8" rx="8.07742" ry="8" transform="matrix(1 0 0 -1 0 16)" fill="white"/>
+                            </svg>
+                        }
+                    </div>
+                ))}
+                <p className={`${selectedIndex == 0 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out`}>{headingList[0]}</p>
+                <p className={`${selectedIndex == 1 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out`}>{headingList[1]}</p>
+                <p className={`${selectedIndex == 2 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out`}>{headingList[2]}</p>
+                <p className={`${selectedIndex == 3 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out`}>{headingList[3]}</p>
+            </div>
+        </div>
 
         <div className={"overflow-hidden relative"} style={heightByElementSize}>
             {contentsByHeading.map((content:()=>JSX.Element, index:number) => (
