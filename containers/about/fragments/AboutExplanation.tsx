@@ -1,6 +1,6 @@
 export const AboutExplanation = () => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center mb-[130px]">
             <img
                 src="/about_title.png"
                 width="458.297px"
