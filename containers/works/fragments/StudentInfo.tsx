@@ -25,7 +25,7 @@ export const StudentInfo = () => {
         <p className='text-[#6F6F6F] text-base lg:hidden'>OTHER WORK</p>
         <div className='h-full'>
           <Image src={projectcover} layout='responsive' />
-          <div className='absolute top-0 right-0 p-5 text-white sm:hidden'>
+          <div className='absolute top-0 right-0 p-5 text-white hidden lg:block'>
             OTHER WORK
           </div>
         </div>

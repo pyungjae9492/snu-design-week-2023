@@ -23,7 +23,7 @@ export const WorksContainer = () => {
               width='17px'
               height='17px'
               layout='fixed'
-              className='visible sm:invisible'
+              className='invisible lg:visible'
             />
             <MenuBar
               isMenuOpen={isMenuOpen}
