@@ -14,7 +14,9 @@ export default function MenuBar(props) {
 
   const circleMenu = (menu: string) => (
     <div className={`flex flex-row w-[550px] h-[90px] items-center gap-10`}>
-      <Image src={ellipse} width='17px' height='17px' layout='fixed' />
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 15 15" fill="none">
+        <circle cx="7.4084" cy="7.35111" r="6.92308" transform="rotate(50 7.4084 7.35111)" fill="white"/>
+      </svg>
       <div
         onClick={() => onSelectMenu(menu)}
         className='flex text-5xl cursor-pointer'
@@ -48,7 +50,7 @@ export default function MenuBar(props) {
   }
 
   return (
-    <div className='w-[500px] max-h-[300px]'>
+    <div className='w-[500px] max-h-[300px] border border-white'>
       {props.isMenuOpen ? (
         <div className='absolute top-[10%] -left-[450px]'>
           <div className={onlyShown === 'ALL' ? styles.ALLSHOWN : styles.ALL}>

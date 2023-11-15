@@ -1,14 +1,3 @@
-.circle {
-  width: 1200px;
-  height: 1200px;
-  border-radius: 50%;
-  background: transparent;
-  /* border: 1px solid #fff; */
-  position: relative;
-  top: -750px;
-  left: -900px;
-}
-
 @keyframes all {
   0% {
     transform: translateX(500px);
@@ -61,16 +50,16 @@
   left: 0%;
 }
 .ALL {
-  animation: all 1s linear forwards;
+  animation: all 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .ALLS {
-  animation: alls 1s linear forwards;
+  animation: alls 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .ALLR {
-  animation: allr 1s linear forwards;
+  animation: allr 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .ALLSHOWN {
-  animation: allshown 1s linear forwards;
+  animation: allshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes brand {
@@ -141,16 +130,16 @@
   left: 0%;
 }
 .BRAND {
-  animation: brand 2s linear forwards;
+  animation: brand 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .BRANDS {
-  animation: brands 2s linear forwards;
+  animation: brands 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .BRANDR {
-  animation: brandr 2s linear forwards;
+  animation: brandr 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .BRANDSHOWN {
-  animation: brandshown 2s linear forwards;
+  animation: brandshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes uxui {
@@ -221,16 +210,16 @@
   left: 0%;
 }
 .UXUI {
-  animation: uxui 2s linear forwards;
+  animation: uxui 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .UXUIS {
-  animation: uxuis 2s linear forwards;
+  animation: uxuis 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .UXUIR {
-  animation: uxuir 2s linear forwards;
+  animation: uxuir 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .UXUISHOWN {
-  animation: uxuishown 2s linear forwards;
+  animation: uxuishown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes media {
@@ -301,16 +290,16 @@
   left: 0%;
 }
 .MEDIA {
-  animation: media 2s linear forwards;
+  animation: media 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .MEDIAS {
-  animation: medias 2s linear forwards;
+  animation: medias 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .MEDIAR {
-  animation: mediar 2s linear forwards;
+  animation: mediar 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .MEDIASHOWN {
-  animation: mediashown 2s linear forwards;
+  animation: mediashown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes graphic {
@@ -381,16 +370,16 @@
   left: 0%;
 }
 .GRAPHIC {
-  animation: graphic 2s linear forwards;
+  animation: graphic 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .GRAPHICS {
-  animation: graphics 2s linear forwards;
+  animation: graphics 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .GRAPHICR {
-  animation: graphicr 2s linear forwards;
+  animation: graphicr 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .GRAPHICSHOWN {
-  animation: graphicshown 2s linear forwards;
+  animation: graphicshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes product {
@@ -461,16 +450,16 @@
   left: 0%;
 }
 .PRODUCT {
-  animation: product 2s linear forwards;
+  animation: product 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .PRODUCTS {
-  animation: products 2s linear forwards;
+  animation: products 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .PRODUCTR {
-  animation: productr 2s linear forwards;
+  animation: productr 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .PRODUCTSHOWN {
-  animation: productshown 2s linear forwards;
+  animation: productshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes living {
@@ -541,16 +530,16 @@
   left: 0%;
 }
 .LIVING {
-  animation: living 2s linear forwards;
+  animation: living 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .LIVINGS {
-  animation: livings 2s linear forwards;
+  animation: livings 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .LIVINGR {
-  animation: livingr 2s linear forwards;
+  animation: livingr 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .LIVINGSHOWN {
-  animation: livingshown 2s linear forwards;
+  animation: livingshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes mobility {
@@ -621,16 +610,16 @@
   left: 0%;
 }
 .MOBILITY {
-  animation: mobility 2s linear forwards;
+  animation: mobility 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .MOBILITYS {
-  animation: mobilitys 2s linear forwards;
+  animation: mobilitys 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .MOBILITYR {
-  animation: mobilityr 2s linear forwards;
+  animation: mobilityr 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .MOBILITYSHOWN {
-  animation: mobilityshown 2s linear forwards;
+  animation: mobilityshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 
 @keyframes space {
@@ -701,14 +690,14 @@
   left: 0%;
 }
 .SPACE {
-  animation: space 2s linear forwards;
+  animation: space 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .SPACES {
-  animation: spaces 2s linear forwards;
+  animation: spaces 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .SPACER {
-  animation: spacer 2s linear forwards;
+  animation: spacer 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
 .SPACESHOWN {
-  animation: spaceshown 2s linear forwards;
+  animation: spaceshown 1s cubic-bezier(.45,.45,.13,1.43) forwards;
 }
