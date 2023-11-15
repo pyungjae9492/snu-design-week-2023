@@ -12,14 +12,6 @@ export const WorksContainer = () => {
 
   const [selectedMenu, setSelectedMenu] = useState('ALL')
 
-  const getYDiffFromDeg = (deg: number, radius: number) => {
-    return 0 - radius * Math.sin((deg * Math.PI) / 180)
-  }
-
-  const getXDiffFromDeg = (deg: number, radius: number) => {
-    return radius - radius * Math.cos((deg * Math.PI) / 180)
-  }
-
   return (
     <div className='w-full h-max flex-col lg:flex-row'>
       <div className='max-h-screen flex-col mx-6 lg:flex lg:flex-row lg:justify-between'>
