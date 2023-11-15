@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
-import { is } from 'date-fns/locale'
 import ellipse from 'public/ellipse.png'
 
 import MenuBar from './fragments/MenuBar'
@@ -12,6 +11,14 @@ export const WorksContainer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
 
   const [selectedMenu, setSelectedMenu] = useState('ALL')
+
+  const getYDiffFromDeg = (deg: number, radius: number) => {
+    return 0 - radius * Math.sin((deg * Math.PI) / 180)
+  }
+
+  const getXDiffFromDeg = (deg: number, radius: number) => {
+    return radius - radius * Math.cos((deg * Math.PI) / 180)
+  }
 
   return (
     <div className='w-full h-max flex-col lg:flex-row'>
