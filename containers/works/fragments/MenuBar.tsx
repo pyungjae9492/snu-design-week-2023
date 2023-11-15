@@ -10,13 +10,26 @@ import styles from './menubar.module.css'
 }
 export default function MenuBar(props) {
   const [selectedMenu, setSelectedMenu] = useState(props.selectedMenu)
+  const [onlyShown, setOnlyShown] = useState('')
 
-  const beforeOpenMenu = (menu: string) => (
-    <div className={`flex flex-row items-center gap-10`}>
+  const circleMenu = (menu: string) => (
+    <div className={`flex flex-row w-[550px] h-[90px] items-center gap-10`}>
       <Image src={ellipse} width='17px' height='17px' layout='fixed' />
       <div
         onClick={() => onSelectMenu(menu)}
-        className='flex flex-wrap text-5xl  cursor-pointer border border-red-400'
+        className='flex text-5xl cursor-pointer'
+      >
+        {menu}
+      </div>
+    </div>
+  )
+
+  const afterOpenMenu = (menu: string) => (
+    <div className={`flex flex-row w-[550px] h-[90px] items-center gap-10`}>
+      <Image src={ellipse} width='17px' height='17px' layout='fixed' />
+      <div
+        onClick={() => reselectMenu(menu)}
+        className='flex text-5xl cursor-pointer'
       >
         {menu}
       </div>
@@ -28,107 +41,125 @@ export default function MenuBar(props) {
     setSelectedMenu(menu)
   }
 
+  const reselectMenu = (menu: string) => {
+    props.setIsMenuOpen(!props.isMenuOpen)
+    setOnlyShown(menu)
+    console.log('only shown menu: ', onlyShown)
+  }
+
   return (
     <div className='w-[500px] max-h-[300px]'>
       {props.isMenuOpen ? (
-        <div className={styles.circle}>
-          <>
-            <div className={styles.all}>{beforeOpenMenu('ALL')}</div>
-            <div className={styles.brand}>{beforeOpenMenu('BRAND')}</div>
-            <div className={styles.uxui}>{beforeOpenMenu('UX/UI')}</div>
-            <div className={styles.media}>{beforeOpenMenu('MEDIA')}</div>
-            <div className={styles.graphic}>{beforeOpenMenu('GRAPHIC')}</div>
-            <div className={styles.product}>
-              {beforeOpenMenu('PRODUCT INTERACTION')}
-            </div>
-            <div className={styles.living}>{beforeOpenMenu('LIVING')}</div>
-            <div className={styles.mobility}>{beforeOpenMenu('MOBILITY')}</div>
-            <div className={styles.space}>{beforeOpenMenu('SPACE')}</div>
-          </>
+        <div className='absolute top-[10%] -left-[450px]'>
+          <div className={onlyShown === 'ALL' ? styles.ALLSHOWN : styles.ALL}>
+            {circleMenu('ALL')}
+          </div>
+          <div
+            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : styles.BRAND}
+          >
+            {circleMenu('BRAND')}
+          </div>
+          <div
+            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : styles.UXUI}
+          >
+            {circleMenu('UX/UI')}
+          </div>
+          <div
+            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : styles.MEDIA}
+          >
+            {circleMenu('MEDIA')}
+          </div>
+          <div
+            className={
+              onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : styles.GRAPHIC
+            }
+          >
+            {circleMenu('GRAPHIC')}
+          </div>
+          <div
+            className={
+              onlyShown === 'PRODUCT INTERACTION'
+                ? styles.PRODUCTSHOWN
+                : styles.PRODUCT
+            }
+          >
+            {circleMenu('PRODUCT INTERACTION')}
+          </div>
+          <div
+            className={
+              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : styles.LIVING
+            }
+          >
+            {circleMenu('LIVING')}
+          </div>
+          <div
+            className={
+              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : styles.MOBILITY
+            }
+          >
+            {circleMenu('MOBILITY')}
+          </div>
+          <div
+            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : styles.SPACE}
+          >
+            {circleMenu('SPACE')}
+          </div>
         </div>
       ) : (
-        <div className={styles.circle}>
-          <>
-            <div
-              className={
-                selectedMenu === 'ALL' ? styles.allselected : styles.allreverse
-              }
-            >
-              {beforeOpenMenu('ALL')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'BRAND'
-                  ? styles.brandselected
-                  : styles.brandreverse
-              }
-            >
-              {beforeOpenMenu('BRAND')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'UX/UI'
-                  ? styles.uxuiselected
-                  : styles.uxuireverse
-              }
-            >
-              {beforeOpenMenu('UX/UI')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'MEDIA'
-                  ? styles.mediaselected
-                  : styles.mediareverse
-              }
-            >
-              {beforeOpenMenu('MEDIA')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'GRAPHIC'
-                  ? styles.graphicselected
-                  : styles.graphicreverse
-              }
-            >
-              {beforeOpenMenu('GRAPHIC')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'PRODUCT INTERACTION'
-                  ? styles.productselected
-                  : styles.productreverse
-              }
-            >
-              {beforeOpenMenu('PRODUCT INTERACTION')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'LIVING'
-                  ? styles.livingselected
-                  : styles.livingreverse
-              }
-            >
-              {beforeOpenMenu('LIVING')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'MOBILITY'
-                  ? styles.mobilityselected
-                  : styles.mobilityreverse
-              }
-            >
-              {beforeOpenMenu('MOBILITY')}
-            </div>
-            <div
-              className={
-                selectedMenu === 'SPACE'
-                  ? styles.spaceselected
-                  : styles.spacereverse
-              }
-            >
-              {beforeOpenMenu('SPACE')}
-            </div>
-          </>
+        <div className='absolute top-[10%] -left-[450px]'>
+          <div className={selectedMenu === 'ALL' ? styles.ALLS : styles.ALLR}>
+            {afterOpenMenu('ALL')}
+          </div>
+          <div
+            className={selectedMenu === 'BRAND' ? styles.BRANDS : styles.BRANDR}
+          >
+            {afterOpenMenu('BRAND')}
+          </div>
+          <div
+            className={selectedMenu === 'UX/UI' ? styles.UXUIS : styles.UXUIR}
+          >
+            {afterOpenMenu('UX/UI')}
+          </div>
+          <div
+            className={selectedMenu === 'MEDIA' ? styles.MEDIAS : styles.MEDIAR}
+          >
+            {afterOpenMenu('MEDIA')}
+          </div>
+          <div
+            className={
+              selectedMenu === 'GRAPHIC' ? styles.GRAPHICS : styles.GRAPHICR
+            }
+          >
+            {afterOpenMenu('GRAPHIC')}
+          </div>
+          <div
+            className={
+              selectedMenu === 'PRODUCT INTERACTION'
+                ? styles.PRODUCTS
+                : styles.PRODUCTR
+            }
+          >
+            {afterOpenMenu('PRODUCT INTERACTION')}
+          </div>
+          <div
+            className={
+              selectedMenu === 'LIVING' ? styles.LIVINGS : styles.LIVINGR
+            }
+          >
+            {afterOpenMenu('LIVING')}
+          </div>
+          <div
+            className={
+              selectedMenu === 'MOBILITY' ? styles.MOBILITYS : styles.MOBILITYR
+            }
+          >
+            {afterOpenMenu('MOBILITY')}
+          </div>
+          <div
+            className={selectedMenu === 'SPACE' ? styles.SPACES : styles.SPACER}
+          >
+            {afterOpenMenu('SPACE')}
+          </div>
         </div>
       )}
     </div>

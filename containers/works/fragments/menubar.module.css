@@ -5,186 +5,710 @@
   background: transparent;
   /* border: 1px solid #fff; */
   position: relative;
-  top: -600px;
+  top: -750px;
   left: -900px;
 }
 
-@keyframes move {
+@keyframes all {
   0% {
-    transform: translateX(0);
+    transform: translateX(500px);
     opacity: 0;
   }
   100% {
-    transform: rotate(var(--angle)) translateX(var(--x));
+    transform: rotate(0deg) translateX(750px);
     opacity: 1;
   }
 }
-
-.all,
-.brand,
-.uxui,
-.media,
-.graphic,
-.product,
-.living,
-.mobility,
-.space {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding-left: 50%;
-  transform-origin: center left;
-  animation: move 2s linear forwards;
-  animation-delay: 2s;
-  opacity: 0;
-  --x: 0px;
-  --y: 0;
-}
-.all {
-  padding-left: 0px;
-  animation-delay: 0s;
-  --angle: 0deg;
-  --x: 50%;
-}
-.brand {
-  --angle: 7deg;
-}
-.uxui {
-  --angle: 14deg;
-}
-.media {
-  --angle: 21deg;
-}
-.graphic {
-  --angle: 28deg;
-}
-.product {
-  width: 110%;
-  --angle: 35deg;
-}
-.living {
-  --angle: 42deg;
-}
-.mobility {
-  --angle: 49deg;
-}
-.space {
-  --angle: 56deg;
-}
-
-@keyframes moveselected {
+@keyframes alls {
   0% {
-    transform: translateX(var(--x));
+    transform: rotate(0deg) translateX(750px);
+    opacity: 1;
   }
   100% {
-    transform: rotate(var(--angle));
+    transform: translateX(500px);
+    opacity: 1;
   }
 }
-.allselected,
-.brandselected,
-.uxuiselected,
-.mediaselected,
-.graphicselected,
-.productselected,
-.livingselected,
-.mobilityselected,
-.spaceselected {
-  width: 100%;
+@keyframes allr {
+  0% {
+    transform: rotate(0deg) translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(750px);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes allshown {
+  0% {
+    transform: translateX(500px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.ALL,
+.ALLS,
+.ALLR,
+.ALLSHOWN {
+  width: 370px;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding-left: 50%;
-  transform-origin: center left;
-  animation: moveselected 2s linear forwards;
-  animation-direction: reverse;
-  --x: -300px;
+  top: 10%;
+  left: 0%;
 }
-.allselected {
-  --angle: 0deg;
+.ALL {
+  animation: all 1s linear forwards;
 }
-.brandselected {
-  --angle: 7deg;
+.ALLS {
+  animation: alls 1s linear forwards;
 }
-.uxuiselected {
-  --angle: 14deg;
+.ALLR {
+  animation: allr 1s linear forwards;
 }
-.mediaselected {
-  --angle: 21deg;
-}
-.graphicselected {
-  --angle: 28deg;
-}
-.productselected {
-  width: 110%;
-  --angle: 35deg;
-}
-.livingselected {
-  --angle: 42deg;
-}
-.mobilityselected {
-  --angle: 49deg;
-}
-.spaceselected {
-  --angle: 56deg;
+.ALLSHOWN {
+  animation: allshown 1s linear forwards;
 }
 
-@keyframes movereverse {
+@keyframes brand {
   0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
     opacity: 0;
   }
   100% {
-    transform: rotate(var(--angle));
+    transform: rotate(7deg) translateX(750px);
     opacity: 1;
   }
 }
-.allreverse,
-.brandreverse,
-.uxuireverse,
-.mediareverse,
-.graphicreverse,
-.productreverse,
-.livingreverse,
-.mobilityreverse,
-.spacereverse {
-  --origin: 0;
-  width: 100%;
+@keyframes brands {
+  0% {
+    transform: rotate(7deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes brandr {
+  0% {
+    transform: rotate(7deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes brandshown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(7deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.BRAND,
+.BRANDS,
+.BRANDR,
+.BRANDSHOWN {
+  width: 370px;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding-left: 50%;
-  transform-origin: center left;
-  animation: movereverse 1s linear forwards;
-  animation-direction: reverse;
+  top: 10%;
+  left: 0%;
 }
-.allreverse {
-  --angle: 0deg;
+.BRAND {
+  animation: brand 2s linear forwards;
 }
-.brandreverse {
-  --angle: 7deg;
+.BRANDS {
+  animation: brands 2s linear forwards;
 }
-.uxuireverse {
-  --angle: 14deg;
+.BRANDR {
+  animation: brandr 2s linear forwards;
 }
-.mediareverse {
-  --angle: 21deg;
+.BRANDSHOWN {
+  animation: brandshown 2s linear forwards;
 }
-.graphicreverse {
-  --angle: 28deg;
+
+@keyframes uxui {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(14deg) translateX(750px);
+    opacity: 1;
+  }
 }
-.productreverse {
-  width: 110%;
-  --angle: 35deg;
+@keyframes uxuis {
+  0% {
+    transform: rotate(14deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
 }
-.livingreverse {
-  --angle: 42deg;
+@keyframes uxuir {
+  0% {
+    transform: rotate(14deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
 }
-.mobilityreverse {
-  --angle: 49deg;
+@keyframes uxuishown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(14deg) translateX(750px);
+    opacity: 1;
+  }
 }
-.spacereverse {
-  --angle: 56deg;
+.UXUI,
+.UXUIS,
+.UXUIR,
+.UXUISHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.UXUI {
+  animation: uxui 2s linear forwards;
+}
+.UXUIS {
+  animation: uxuis 2s linear forwards;
+}
+.UXUIR {
+  animation: uxuir 2s linear forwards;
+}
+.UXUISHOWN {
+  animation: uxuishown 2s linear forwards;
+}
+
+@keyframes media {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(21deg) translateX(750px);
+    opacity: 1;
+  }
+}
+@keyframes medias {
+  0% {
+    transform: rotate(21deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes mediar {
+  0% {
+    transform: rotate(21deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes mediashown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(21deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.MEDIA,
+.MEDIAS,
+.MEDIAR,
+.MEDIASHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.MEDIA {
+  animation: media 2s linear forwards;
+}
+.MEDIAS {
+  animation: medias 2s linear forwards;
+}
+.MEDIAR {
+  animation: mediar 2s linear forwards;
+}
+.MEDIASHOWN {
+  animation: mediashown 2s linear forwards;
+}
+
+@keyframes graphic {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(28deg) translateX(750px);
+    opacity: 1;
+  }
+}
+@keyframes graphics {
+  0% {
+    transform: rotate(28deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes graphicr {
+  0% {
+    transform: rotate(28deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes graphicshown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(28deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.GRAPHIC,
+.GRAPHICS,
+.GRAPHICR,
+.GRAPHICSHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.GRAPHIC {
+  animation: graphic 2s linear forwards;
+}
+.GRAPHICS {
+  animation: graphics 2s linear forwards;
+}
+.GRAPHICR {
+  animation: graphicr 2s linear forwards;
+}
+.GRAPHICSHOWN {
+  animation: graphicshown 2s linear forwards;
+}
+
+@keyframes product {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(35deg) translateX(750px);
+    opacity: 1;
+  }
+}
+@keyframes products {
+  0% {
+    transform: rotate(35deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes productr {
+  0% {
+    transform: rotate(35deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes productshown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(35deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.PRODUCT,
+.PRODUCTS,
+.PRODUCTR,
+.PRODUCTSHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.PRODUCT {
+  animation: product 2s linear forwards;
+}
+.PRODUCTS {
+  animation: products 2s linear forwards;
+}
+.PRODUCTR {
+  animation: productr 2s linear forwards;
+}
+.PRODUCTSHOWN {
+  animation: productshown 2s linear forwards;
+}
+
+@keyframes living {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(42deg) translateX(750px);
+    opacity: 1;
+  }
+}
+@keyframes livings {
+  0% {
+    transform: rotate(42deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes livingr {
+  0% {
+    transform: rotate(42deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes livingshown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(42deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.LIVING,
+.LIVINGS,
+.LIVINGR,
+.LIVINGSHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.LIVING {
+  animation: living 2s linear forwards;
+}
+.LIVINGS {
+  animation: livings 2s linear forwards;
+}
+.LIVINGR {
+  animation: livingr 2s linear forwards;
+}
+.LIVINGSHOWN {
+  animation: livingshown 2s linear forwards;
+}
+
+@keyframes mobility {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(49deg) translateX(750px);
+    opacity: 1;
+  }
+}
+@keyframes mobilitys {
+  0% {
+    transform: rotate(49deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes mobilityr {
+  0% {
+    transform: rotate(49deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes mobilityshown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(49deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.MOBILITY,
+.MOBILITYS,
+.MOBILITYR,
+.MOBILITYSHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.MOBILITY {
+  animation: mobility 2s linear forwards;
+}
+.MOBILITYS {
+  animation: mobilitys 2s linear forwards;
+}
+.MOBILITYR {
+  animation: mobilityr 2s linear forwards;
+}
+.MOBILITYSHOWN {
+  animation: mobilityshown 2s linear forwards;
+}
+
+@keyframes space {
+  0% {
+    transform: translateX(0500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(56deg) translateX(750px);
+    opacity: 1;
+  }
+}
+@keyframes spaces {
+  0% {
+    transform: rotate(56deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes spacer {
+  0% {
+    transform: rotate(56deg) translateX(750px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes spaceshown {
+  0% {
+    transform: translateX(500px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(750px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(56deg) translateX(750px);
+    opacity: 1;
+  }
+}
+.SPACE,
+.SPACES,
+.SPACER,
+.SPACESHOWN {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+.SPACE {
+  animation: space 2s linear forwards;
+}
+.SPACES {
+  animation: spaces 2s linear forwards;
+}
+.SPACER {
+  animation: spacer 2s linear forwards;
+}
+.SPACESHOWN {
+  animation: spaceshown 2s linear forwards;
 }
