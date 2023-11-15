@@ -5,7 +5,7 @@ import { Layout } from '@/components/Layout'
 import AboutContainer from 'containers/about'
 
 export const AboutPage: React.FC = () => {
-  const title = '어바웃'
+  const title = 'About'
 
   return (
     <>

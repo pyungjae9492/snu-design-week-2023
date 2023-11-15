@@ -5,7 +5,7 @@ import ProgramContainer from 'containers/program'
 import { Layout } from '@/components/Layout'
 
 export const ProgramPage: React.FC = () => {
-  const title = '프로그램'
+  const title = 'Program'
 
   return (
     <>
