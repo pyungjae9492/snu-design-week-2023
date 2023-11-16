@@ -4,7 +4,7 @@ export const ExhibitionParticipants = () => {
     const participants = ["금민정", "김서영", "김수현", "김연우", "김유로", "김채영", "김한나", "김현수", "김헤령", "김혜영", "박선유", "박소영", "박지호", "서하연", "송채은", "안서현", "오채은", "윤지인", "이규원", "이수경", "이은채", "이태윤", "전유정", "전희은", "정가은", "정지운", "채정화", "권정민", "김가은", "김현지", "나희연", "남현지", "서아연", "신예림", "이나연", "이민지", "임유리", "전민경", "조동주", "최다정", "최혜연"]
 
     return (
-        <div className="flex flex-col mt-[96px] sm:mt-[140px]">
+        <div className="flex flex-col mt-[96px] sm:mt-[170px]">
             <p className="text-[30px] font-normal leading-[40px] tracking-[-1.5px] mb-[31.5px] sm:font-medium sm:text-[20px] sm:leading-[30px] sm:mb-[40px] sm:tracking-normal">전시참여자</p>
             <div className="flex flex-wrap gap-[48px] mb-[233px]">
                 {participants.map((participant, index) => (

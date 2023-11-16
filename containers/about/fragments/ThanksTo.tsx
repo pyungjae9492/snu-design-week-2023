@@ -24,7 +24,7 @@ const ThanksToComponent: React.FC<{num: number, team: string, teamMates: string}
 
 export const ThanksTo = () => {
     return (
-        <div className="flex flex-col mt-[96px]">
+        <div className="flex flex-col mt-[96px] sm:mt-[120px]">
             <p className="text-[30px] font-normal leading-[40px] tracking-[-1.5px] mb-[31.5px] sm:text-[20px] sm:font-medium sm:leading-[30px] sm:mb-[40px]">도움 주신 분들</p>
             <ThanksToComponent num={1} team={team1} teamMates={teamMates1} />
             <ThanksToComponent num={2} team={team2} teamMates={teamMates2} />

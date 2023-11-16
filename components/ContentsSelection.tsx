@@ -131,7 +131,7 @@ export const ContentsSelection = ({ headingList, contentsByHeading }) => {
 
         <div className={"overflow-hidden relative"} style={heightByElementSize}>
             {contentsByHeading.map((content:()=>JSX.Element, index:number) => (
-                <div key={index} className={`${selectedIndex === index ? "opacity-100" : "opacity-0"} absolute transition-opacity duration-500 ease-in-out w-[55%] ml-[22.5%]`} ref={(ref) => {wholeContentsRef.current[index] = ref}}>
+                <div key={index} className={`${selectedIndex === index ? "opacity-100" : "opacity-0"} absolute transition-opacity duration-500 ease-in-out w-[55%] ml-[22.5%] sm:w-[90%] sm:justify-center sm:ml-[5%]`} ref={(ref) => {wholeContentsRef.current[index] = ref}}>
                     {content()}
                 </div>
             ))}

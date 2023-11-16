@@ -65,7 +65,7 @@ const PreparationComitteeComponent: React.FC<{num:number, team: string, teamExpl
 
 export const PreparationComittee = () => {
     return (
-        <div className="flex flex-col mt-[64px] sm:mt-[140px]">
+        <div className="flex flex-col mt-[64px] sm:mt-[170px]">
             <PreparationComitteeComponent num={0} team={team1} teamExplain={teamExplain1} teamMates={teamMates1} />
             <PreparationComitteeComponent num={1} team={team2} teamExplain={teamExplain2} teamMates={teamMates2} />
             <PreparationComitteeComponent num={2} team={team3} teamExplain={teamExplain3} teamMates={teamMates3} />
