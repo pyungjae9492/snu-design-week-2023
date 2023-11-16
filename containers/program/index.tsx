@@ -12,8 +12,8 @@ export const ProgramContainer: React.FC = () => {
             <ProgramExplanation />
 
             <ContentsSelection 
-                headingList={["Opening Day", "Workshop", "Talk Concert", "Homecoming Day"]}
-                contentsByHeading={[OpeningDay, Workshop, TalkConcert, HomecomingDay]}
+                headingList={["Opening Day", "Workshop", "Hi Day", "Talk Concert"]}
+                contentsByHeading={[OpeningDay, Workshop, HomecomingDay, TalkConcert]}
             />
         </>
     )

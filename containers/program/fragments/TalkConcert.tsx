@@ -6,7 +6,7 @@ export const TalkConcert = () => {
     return (
         <div className="flex flex-col">
             <div className="w-[100%] h-[543.337px] flex-shrink-0 bg-[#FFFFFF] mt-[80.29px] mb-[56.66px] self-center"></div>
-            <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px]">토크콘서트<br/>Talk concert</p>
+            <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px]">토크콘서트<br/>Talk Concert</p>
             <p className="w-[45%] text-[#FFF] text-[15px] leading-[30px] tracking-[-0.165px] whitespace-pre-line">{talkConcertDetails}</p>
 
             <div className="flex flex-row gap-[80px] mt-[70px] mb-[262px]">

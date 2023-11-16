@@ -4,7 +4,7 @@ export const OpeningDay = () => {
     return (
         <div className="flex flex-col">
             <div className="w-[100%] h-[543.337px] flex-shrink-0 bg-[#FFFFFF] mt-[80.29px] mb-[56.66px] self-center"></div>
-            <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px]">Opening Day<br/>오프닝데이</p>
+            <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px]">오프닝데이<br/>Opening day</p>
             <p className="w-[45%] text-[#FFF] text-[15px] leading-[30px] tracking-[-0.165px] mb-[316px] whitespace-pre-line">{openingDayDetails}</p>
         </div>
     )
