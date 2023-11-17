@@ -25,11 +25,7 @@ export const StudentInfo = () => {
         <p className='text-[#6F6F6F] text-base lg:hidden'>OTHER WORK</p>
         <div className='h-full'>
           <Image src={projectcover} layout='responsive' />
-<<<<<<< HEAD
           <div className='absolute top-0 right-0 p-5 text-white hidden lg:block'>
-=======
-          <div className='absolute top-0 right-0 p-5 text-white sm:hidden'>
->>>>>>> 4b81155 (feat: individual work page without 'more works in...' part in lg)
             OTHER WORK
           </div>
         </div>
