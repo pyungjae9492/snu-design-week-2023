@@ -51,7 +51,7 @@ export const MobileHeader = () => {
 
     return (
         <>
-            <div className="sticky top-0 sm:p-6 p-10 w-full sm:flex hidden flex-row justify-between items-center z-50">
+            <div className="sticky top-0 sm:p-6 p-10 w-full sm:flex hidden flex-row justify-between items-center z-50 bg-black mb-10">
                 <p className={`text-white text-2xl font-bold font-snu-regular break-all w-14 leading-5 ${isHome && "invisible"}`}>{"The Great\nBump"}</p>
                 <p className={`text-white text-3xl font-bold font-snu-regular break-all leading-5 ${isHome && "invisible"}`}>{pageName}</p>
                 <button 
