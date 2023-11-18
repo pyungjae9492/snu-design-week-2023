@@ -23,26 +23,6 @@ export const MobileMenuBar = (props) => {
 
     return (
         <>
-            {/* <div className="fixed top-10 w-full flex lg:hidden flex-row justify-end z-50">
-                <button 
-                    onClick={onClickMenuButton}
-                >
-                    {isMenuOpen ? "X" : "Menu"}
-                </button>
-            </div>
-            {isMenuOpen && (
-                <div className="fixed top-0 w-screen h-screen z-40 bg-[rgba(0,0,0,0.9)] flex flex-col gap-10 justify-center items-center">
-                    <p>ALL</p>
-                    <p>BRAND</p>
-                    <p>MEDIA</p>
-                    <p>GRAPHIC</p>
-                    <p>UX/UI</p>
-                    <p>SPACE</p>
-                    <p>PRODUCT INTERACTION</p>
-                    <p>MOBILITY</p>
-                    <p>LIVING</p>
-                </div>
-            )} */}
             {!props.isMenuOpen ? (
                 <div>
                     <div onClick={()=> props.setIsMenuOpen(!props.isMenuOpen)} className="flex flex-row justify-center items-center pt-[50px] pb-5 gap-[25px]">
