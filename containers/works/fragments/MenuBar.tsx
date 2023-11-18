@@ -1,7 +1,4 @@
-import Image from 'next/image'
 import React, { useState } from 'react'
-
-import ellipse from 'public/ellipse.png'
 
 import styles from './menubar.module.css'
 
@@ -14,7 +11,9 @@ export default function MenuBar(props) {
 
   const circleMenu = (menu: string) => (
     <div className={`flex flex-row w-[550px] h-[90px] items-center gap-10`}>
-      <Image src={ellipse} width='17px' height='17px' layout='fixed' />
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 15 15" fill="none">
+        <circle cx="7.4084" cy="7.35111" r="6.92308" transform="rotate(50 7.4084 7.35111)" fill="white"/>
+      </svg>
       <div
         onClick={() => onSelectMenu(menu)}
         className='flex text-5xl cursor-pointer'
@@ -26,7 +25,9 @@ export default function MenuBar(props) {
 
   const afterOpenMenu = (menu: string) => (
     <div className={`flex flex-row w-[550px] h-[90px] items-center gap-10`}>
-      <Image src={ellipse} width='17px' height='17px' layout='fixed' />
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 15 15" fill="none">
+        <circle cx="7.4084" cy="7.35111" r="6.92308" transform="rotate(50 7.4084 7.35111)" fill="white"/>
+      </svg>
       <div
         onClick={() => reselectMenu(menu)}
         className='flex text-5xl cursor-pointer'
@@ -39,18 +40,18 @@ export default function MenuBar(props) {
   const onSelectMenu = (menu: string) => {
     props.setIsMenuOpen(!props.isMenuOpen)
     setSelectedMenu(menu)
+    props.setSelectedMenu(menu)
   }
 
   const reselectMenu = (menu: string) => {
     props.setIsMenuOpen(!props.isMenuOpen)
     setOnlyShown(menu)
-    console.log('only shown menu: ', onlyShown)
   }
 
   return (
-    <div className='w-[500px] max-h-[300px]'>
+    <>
       {props.isMenuOpen ? (
-        <div className='absolute top-[10%] -left-[450px]'>
+        <div className='absolute top-0 -left-[500px]'>
           <div className={onlyShown === 'ALL' ? styles.ALLSHOWN : styles.ALL}>
             {circleMenu('ALL')}
           </div>
@@ -106,7 +107,7 @@ export default function MenuBar(props) {
           </div>
         </div>
       ) : (
-        <div className='absolute top-[10%] -left-[450px]'>
+        <div className='absolute top-0 -left-[500px]'>
           <div className={selectedMenu === 'ALL' ? styles.ALLS : styles.ALLR}>
             {afterOpenMenu('ALL')}
           </div>
@@ -162,6 +163,6 @@ export default function MenuBar(props) {
           </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
