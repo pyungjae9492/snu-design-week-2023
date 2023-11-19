@@ -1,7 +1,4 @@
-import Image from 'next/image'
 import React, { useState } from 'react'
-
-import ellipse from 'public/ellipse.png'
 
 import styles from './menubar.module.css'
 
@@ -49,7 +46,6 @@ export default function MenuBar(props) {
   const reselectMenu = (menu: string) => {
     props.setIsMenuOpen(!props.isMenuOpen)
     setOnlyShown(menu)
-    // console.log('only shown menu: ', onlyShown)
   }
 
   return (

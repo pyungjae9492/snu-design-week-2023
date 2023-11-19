@@ -13,10 +13,10 @@ const contentsEN3 = "The motion poster consists of two versions: divergence and 
 const VisualIdentityComponent: React.FC<{title: string, contentsKO: string, contentsEN: string}> = ({title, contentsKO, contentsEN}) => {
     return (
         <>
-            <p className="text-[30px] font-normal leading-[40px] tracking-[-1.5px]">{title}</p>
-            <div className="flex flex-row gap-[72px] mt-[31.5px] mb-[64.18px]">
-                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%]">{contentsKO}</p>
-                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%]">{contentsEN}</p>
+            <p className="text-[30px] font-normal leading-[40px] tracking-[-1.5px] sm:text-[20px] sm:font-medium">{title}</p>
+            <div className="flex flex-row gap-[72px] mt-[31.5px] mb-[64.18px] sm:justify-center sm:mt-[24px] sm:mb-0">
+                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] sm:text-[14px] sm:w-full sm:font-medium">{contentsKO}</p>
+                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] sm:hidden">{contentsEN}</p>
             </div>
         </>
     );
@@ -24,20 +24,20 @@ const VisualIdentityComponent: React.FC<{title: string, contentsKO: string, cont
 
 export const VisualIdentity = () => {
     return (
-        <div className="flex flex-col mt-[96px]">
+        <div className="flex flex-col mt-[96px] sm:mt-[120px]">
             <VisualIdentityComponent title={title1} contentsKO={contentsKO1} contentsEN={contentsEN1} />
-            <img src="/about_visual_identity.png" width="904.001px" height="353.996px" className="self-center mt-[8.32px] mb-[120.5px]" />
+            <img src="/about_visual_identity.png" width="904.001px" height="353.996px" className="self-center mt-[8.32px] mb-[120.5px] sm:mt-[24px] sm:mb-[60px]" />
             <VisualIdentityComponent title={title2} contentsKO={contentsKO2} contentsEN={contentsEN2} />
-            <div className="flex flex-row items-center mb-[91px]">
-                <p className="text-white text-[45.297px] font-normal leading-[40.444px] tracking-[-0.498px] font-snu-regular mr-[55px]">
+            <div className="flex flex-row items-center mb-[91px] sm:mt-[12px] sm:mb-[60px] sm:justify-center sm:flex-col sm:gap-[11px]">
+                <p className="text-white text-[45.297px] font-normal leading-[40.444px] tracking-[-0.498px] font-snu-regular mr-[55px] sm:text-[28px] sm:leading-[30px] sm:mr-0 sm:text-center sm:tracking-normal">
                 ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?-+
                 </p>
-                <p className="text-white text-[56px] font-normal leading-[50px] tracking-[-0.616px] font-snu-regular">
+                <p className="text-white text-[56px] font-normal leading-[50px] tracking-[-0.616px] font-snu-regular sm:text-[32px] sm:leading-[30px] sm:tracking-[-0.352px]">
                 the great bump<br/>2023 snu design week
                 </p>
             </div>
             <VisualIdentityComponent title={title3} contentsKO={contentsKO3} contentsEN={contentsEN3} />
-            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px]" />
+            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px] sm:mt-[97px] sm:mb-[120px]" />
         </div>
     );
 }

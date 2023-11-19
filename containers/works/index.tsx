@@ -1,7 +1,4 @@
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-
-import ellipse from 'public/ellipse.png'
+import React, { useState } from 'react'
 
 import MenuBar from './fragments/MenuBar'
 import { MobileMenuBar } from './fragments/MobileMenuBar'

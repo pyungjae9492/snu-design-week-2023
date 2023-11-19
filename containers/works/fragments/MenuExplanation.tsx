@@ -1,5 +1,4 @@
 export const MenuExplanation = ({selectedMenu}) => {
-
   let title = ''
   let professor = ''
   let advisor = ''
