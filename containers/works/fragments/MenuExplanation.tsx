@@ -1,8 +1,4 @@
-{
-  /*props로 selectedMenu 넘겨받기*/
-}
 export const MenuExplanation = ({selectedMenu}) => {
-  
   let title = ''
   let professor = ''
   let advisor = ''

@@ -25,7 +25,7 @@ export const MobileMenuBar = (props) => {
         <>
             {!props.isMenuOpen ? (
                 <div>
-                    <div onClick={()=> props.setIsMenuOpen(!props.isMenuOpen)} className="flex flex-row justify-center items-center pb-4 gap-[25px]">
+                    <div onClick={()=> props.setIsMenuOpen(!props.isMenuOpen)} className="flex flex-row justify-center items-center pt-[50px] pb-5 gap-[25px]">
                         <div className={selectedMenu === 'PRODUCT INTERACTION' ? 'w-[150px] justify-center text-center text-2xl leading-[22px] font-semibold cursor-pointer' : 'justify-center text-4xl font-semibold cursor-pointer'}>{selectedMenu}</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
                             <path d="M6.5 8L0.00480908 0.5L12.9952 0.500001L6.5 8Z" fill="white"/>
