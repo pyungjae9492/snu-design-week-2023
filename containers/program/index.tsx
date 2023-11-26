@@ -9,12 +9,14 @@ import { HomecomingDay } from './fragments/HomecomingDay'
 export const ProgramContainer: React.FC = () => {
     return (
         <>
-            <ProgramExplanation />
+            <div className='pt-10 lg:pt-20'>
+                <ProgramExplanation />
 
-            <ContentsSelection 
-                headingList={["Opening Day", "Workshop", "Hi Day", "Talk Concert"]}
-                contentsByHeading={[OpeningDay, Workshop, HomecomingDay, TalkConcert]}
-            />
+                <ContentsSelection 
+                    headingList={["Opening Day", "Workshop", "Hi Day", "Talk Concert"]}
+                    contentsByHeading={[OpeningDay, Workshop, HomecomingDay, TalkConcert]}
+                />
+            </div>
         </>
     )
 }

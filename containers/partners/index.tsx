@@ -37,11 +37,11 @@ const PartnersData = [
     },
     {
         "logo": "josephstacey",
-        "description": "A GOOD BAG, A GOOD LIFE 가장 아름다운 것. 가장 실용적인 것을 위한 탐구. 우리는 라이프와 디자인 사이에서 가치를 찾습니다. 일상에서 영감을 얻어 실용성과 아름다움이 공존하도록 디자인합니다. 기능의 본질을 집요하게 탐구하고 극도의 심플함으로 단순화하면 마침내 생활을 이해한 궁극의 아름다움을 만납니다. 플리츠 기술력을 바탕으로 컬러의 다양함을 구현하며 새로운 기술과 소재를 찾아 지속 가능한 친환경 디자인을 추구합니다"
+        "description": "A GOOD BAG, A GOOD LIFE\n가장 아름다운 것. 가장 실용적인 것을 위한 탐구. 우리는 라이프와 디자인 사이에서 가치를 찾습니다. 일상에서 영감을 얻어 실용성과 아름다움이 공존하도록 디자인합니다. 기능의 본질을 집요하게 탐구하고 극도의 심플함으로 단순화하면 마침내 생활을 이해한 궁극의 아름다움을 만납니다. 플리츠 기술력을 바탕으로 컬러의 다양함을 구현하며 새로운 기술과 소재를 찾아 지속 가능한 친환경 디자인을 추구합니다"
     },
     {
         "logo": "sungwonadpia",
-        "description": "성원애드피아는 인쇄 관련 모든 디자인 컨설팅과 기획, 제작, 배송에 이르기까지 전 공정에 자동화된 원스톱(One-Stop) 시스템을 도입함으로써 한 차원 높고, 차별화된 서비스를 고객에게 제공하고 있습니다. 애드피아몰은 홍보 및 전시 목적으로 포스터, 배너, 현수막, 등신대 등 다양한 인쇄물을 제작할 수 있는 쇼핑몰입니다. ‘인쇄는 쇼핑이다’라는 슬로건 아래 누구나 쉽고 편리하게 이용할 수 있는 장을 제공합니다."
+        "description": "성원애드피아는 인쇄 관련 모든 디자인 컨설팅과 기획, 제작, 배송에 이르기까지 전 공정에 자동화된 원스톱(One-Stop) 시스템을 도입함으로써 한 차원 높고, 차별화된 서비스를 고객에게 제공하고 있습니다.\n\n애드피아몰은 홍보 및 전시 목적으로 포스터, 배너, 현수막, 등신대 등 다양한 인쇄물을 제작할 수 있는 쇼핑몰입니다. ‘인쇄는 쇼핑이다’라는 슬로건 아래 누구나 쉽고 편리하게 이용할 수 있는 장을 제공합니다."
     },
     {
         "logo": "beattitude",
@@ -59,7 +59,7 @@ const PartnersData = [
 
 export const PartnersContainer: React.FC = () => {
     return (
-        <div className="fixed w-screen h-screen bg-black p-6 gap-8 flex flex-col justify-start items-center overflow-auto">
+        <div className="w-screen h-fit bg-black p-6 gap-8 flex flex-col justify-start items-center">
             <p className="text-[80px] font-snu-regular hidden lg:block">
                 Partners
             </p>
@@ -72,7 +72,7 @@ export const PartnersContainer: React.FC = () => {
                     layout="fill"
                 />
             </div>
-            <div className="flex flex-col lg:grid lg:grid-cols-3 w-full h-full max-w-[300px] lg:justify-center lg:max-w-none border-collapse mb-40">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 w-full h-full max-w-[290px] lg:max-w-[870px] lg:gap-2 border-collapse pb-40">
                 {PartnersData.map((data, index) => (
                     <Card
                         key={"partners-logo-" + index}

@@ -44,6 +44,7 @@ export const PCHeader = () => {
 
         return (
             <button 
+                className="h-fit"
                 onClick={() => router.push(`/${pageNameToPath}`)}
                 onPointerEnter={handleHover}
                 onPointerLeave={handleHover}
@@ -65,15 +66,21 @@ export const PCHeader = () => {
     }
 
     return (
-        <div className="sticky top-0 p-10 w-full sm:hidden flex flex-row justify-between z-10">
-            {router.pathname !== "/" ? (
-                <Link href="/">
-                        <Image className="cursor-pointer" src="/header-logo.png" width={200} height={50} alt="logo" />
-                </Link>
-            ) : (
-                <div />
-            )}
-            <div className="flex flex-row gap-[5vw]">
+        <div className={`sticky top-0 p-10 w-full sm:hidden flex flex-row justify-between z-10 bg-black ${router.pathname !== "/" && "items-center"}`}>
+            <Link href="/">
+              {router.pathname !== "/" ? (
+                <Image className="cursor-pointer" src="/header-logo.png" width={200} height={50} alt="logo" />
+              ) : (
+                <div className="flex flex-col gap-4 overflow-x-visible">
+                  <p className="cursor-pointer text-[80px] font-snu-regular leading-[60px]">SNU DESIGN WEEK 2023</p>
+                  <div className="flex flex-row gap-4">
+                    <p className="cursor-pointer text-[80px] font-snu-regular leading-[60px] shrink-0">THE GREAT BUMP</p>
+                    <p className="cursor-pointer text-md shrink-0 whitespace-break-spaces leading-6">{"2023.11.30.THU - 12.05.TUE 10AM - 6PM\n1, GWANAK-RO, GWANAK-GU, SEOUL\n49, COLLEGE OF FINE ARTS, SEOUL NAT’L UNIVERSITY"}</p>
+                  </div>
+                </div>
+              )}
+            </Link>
+            <div className="flex flex-row gap-[5vw] h-fit">
                 <HeaderNavButton pageName="Home" />
                 <HeaderNavButton pageName="About" />
                 <HeaderNavButton pageName="Works" />

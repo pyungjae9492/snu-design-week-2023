@@ -8,12 +8,14 @@ import { ThanksTo } from "./fragments/ThanksTo"
 export const AboutContainer: React.FC = () => {
     return (
         <>
-            <AboutExplanation />
+            <div className="w-full h-full pt-8 lg:pt-20">
+                <AboutExplanation />
 
-            <ContentsSelection 
-                headingList={["Visual Identity", "SNU DESIGN WEEK 2023\nPreperation Comittee", "Exhibition\nParticipants", "Thanks To"]}
-                contentsByHeading={[VisualIdentity, PreparationComittee, ExhibitionParticipants, ThanksTo]}
-            />
+                <ContentsSelection 
+                    headingList={["Visual Identity", "SNU DESIGN WEEK 2023\nPreperation Comittee", "Exhibition\nParticipants", "Thanks To"]}
+                    contentsByHeading={[VisualIdentity, PreparationComittee, ExhibitionParticipants, ThanksTo]}
+                />
+            </div>
         </>
     )
 }

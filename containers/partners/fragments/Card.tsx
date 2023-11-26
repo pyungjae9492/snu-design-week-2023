@@ -8,8 +8,8 @@ interface CardProps {
 export const Card = (props: CardProps) => {
     const { logo, description } = props;
     return (
-        <td className="flex flex-col max-w-[290px] items-center justify-between w-full aspect-square p-4 shrink-0 border-[0.5px] border-white">
-            <div className="relative flex flex-1 justify-center items-center">
+        <td className="flex flex-col max-w-[290px] items-center justify-between w-full p-4 shrink-0 border-[0.5px] border-white h-fit">
+            <div className="relative flex justify-center items-center h-[125px] shrink-0">
                 {logo === "pxd" && <PxdLogo />}
                 {logo === "yoondesigngroup" && <YoondesigngroupLogo />}
                 {logo === "sandollcloud" && <SandollcloudLogo />}
@@ -24,8 +24,8 @@ export const Card = (props: CardProps) => {
                 {logo === "moorim" && <MoorimLogo />}
                 {logo === "snudesignalumni" && <SnudesignalumniLogo />}
             </div>
-            <div className="flex flex-1 justify-center items-center">
-                <p className="text-xs leading-4">
+            <div className="flex flex-1 justify-center items-start min-h-[125px] shrink-0">
+                <p className="text-xs leading-[18px] whitespace-break-spaces">
                     {description}
                 </p>
             </div>

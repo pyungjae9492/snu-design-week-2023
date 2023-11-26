@@ -1,11 +1,29 @@
+import Image from "next/image"
+import { useMemo } from "react"
+
 export const MotionGraphicSection = () => {
+
+    const isMobile = useMemo(() => {
+        if (typeof window !== "undefined") {
+            return window.innerWidth <= 1000
+        }
+    }, [])
+
     return (
         <div
-            className="w-full h-full justify-center items-center flex flex-col"
+            className="relative w-full aspect-[2/3] lg:aspect-[5/2] justify-center items-center flex flex-col"
         >
-            <p className="text-white">
-                홈화면 애니메이션 자리
-            </p>
+            {isMobile ? (
+                <Image
+                    src="/mobile-main-motion-img.png"
+                    layout="fill" 
+                />
+            ) : (
+                <Image
+                    src="/pc-main-motion-img.png"
+                    layout="fill" 
+                />
+            )}
         </div>
     )
 }

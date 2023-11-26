@@ -6,9 +6,20 @@ import React, { useState, useRef } from "react";
 export const ContentsSelection = ({ headingList, contentsByHeading }) => {
     const router = useRouter();
 
+    const isMobile = () => {
+        if (typeof window !== "undefined") {
+            return window.innerWidth <= 1000;
+        }
+    }
+
     const [selectedIndex, setSelectedIndex] = useState(0);
     const wholeContentsRef = useRef([]); // for calculating height of each contents
-    const heightByElementSize = wholeContentsRef.current[selectedIndex] ? { height: wholeContentsRef.current[selectedIndex].offsetHeight} : router.pathname === "/about" ? { height: "3000px" } : { height: "1500px" };
+    const heightByElementSize = wholeContentsRef.current[selectedIndex] ? 
+        { height: wholeContentsRef.current[selectedIndex].offsetHeight} : 
+            router.pathname === "/about" && isMobile() ? { height: 2000 } :
+            router.pathname === "/about" ? { height: 2800 } :
+            router.pathname === "/program" && isMobile() ? { height: 1000 } :
+            router.pathname === "/program" && { height: 1200 }
 
     return (
     <>  
