@@ -1,0 +1,8 @@
+.notion-header,
+.notion-page-cover-wrapper,
+.notion-title,
+.notion-page-icon-image,
+.notion-collection-header
+{
+    display: none;
+}
