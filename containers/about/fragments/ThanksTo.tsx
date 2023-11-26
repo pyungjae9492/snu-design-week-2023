@@ -1,4 +1,4 @@
-// TODO: teamMates 2줄 이상으로 넘어갈 때 들여쓰기
+// TODOsean: teamMates 2줄 이상으로 넘어갈 때 들여쓰기
 
 const team1 = "지도교수님";
 const teamMates1 = "김수정 배민기 이장섭 이준원 안성모 유병준 장성연 조상은";
@@ -46,7 +46,7 @@ const ThanksToComponent: React.FC<{num: number, team: string, teamMates: string}
 
 export const ThanksTo = () => {
     return (
-        <div className="flex flex-col mt-[96px] sm:mt-[120px]">
+        <div className="flex flex-col mt-[96px] sm:mt-[10px]">
             <p className="text-[30px] font-normal leading-[40px] tracking-[-1.5px] mb-[31.5px] sm:text-[20px] sm:font-medium sm:leading-[30px] sm:mb-[40px]">도움 주신 분들</p>
             <ThanksToComponent num={1} team={team1} teamMates={teamMates1} />
             <ThanksToComponent num={2} team={team2} teamMates={teamMates2} />

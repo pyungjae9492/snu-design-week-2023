@@ -1,4 +1,4 @@
-// TODO: | 다음에 gap(or margin) 19px 주기, 팀원 이름 밑으로 내려갈 때 들여쓰기
+// TODOsean: teamMates 2줄 이상으로 넘어갈 때 들여쓰기
 
 const team1 = "2023 졸업주간 준비위원회";
 const teamExplain1 = "졸업주간 준비위원회는 SNU DESIGN WEEK 2023의 기획과 운영을 담당하는 학생 위원회로, 총 33명의 디자인과 학생들로 구성되어 있습니다. 졸업주간 준비위원회는 서로에게 긍정적인 영향을 줄 수 있는 건강하고 평등한 조직을 지향합니다.";
@@ -57,7 +57,7 @@ const PreparationComitteeComponent: React.FC<{num:number, team: string, teamExpl
                 {num === 0 && 
                     <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line sm:font-medium sm:w-full lg:hidden">{teamExplain}</p>
                 }
-                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line sm:font-medium sm:w-full">{teamMates}</p>
+                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[50%] whitespace-pre-line sm:font-medium sm:w-full break-keep">{teamMates}</p>
             </div>
         </div>
     );
@@ -65,7 +65,7 @@ const PreparationComitteeComponent: React.FC<{num:number, team: string, teamExpl
 
 export const PreparationComittee = () => {
     return (
-        <div className="flex flex-col mt-[64px] sm:mt-[170px]">
+        <div className="flex flex-col mt-[64px] sm:mt-[60px]">
             <PreparationComitteeComponent num={0} team={team1} teamExplain={teamExplain1} teamMates={teamMates1} />
             <PreparationComitteeComponent num={1} team={team2} teamExplain={teamExplain2} teamMates={teamMates2} />
             <PreparationComitteeComponent num={2} team={team3} teamExplain={teamExplain3} teamMates={teamMates3} />
