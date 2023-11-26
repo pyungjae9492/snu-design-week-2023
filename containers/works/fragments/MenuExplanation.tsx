@@ -66,10 +66,10 @@ export const MenuExplanation = ({selectedMenu}) => {
     <div className='flex flex-col py-6 gap-3 lg:gap-6'>
       <p className='text-3xl font-medium'>{title}</p>
       { selectedMenu !== 'ALL' && (
-      <div className='text-sm leading-7'>
-        <p>지도교수 | {professor}</p>
-        <p>Advisor | {advisor}</p>
-      </div>
+        <div className='text-sm leading-7'>
+          <p>지도교수 | {professor}</p>
+          <p>Advisor | {advisor}</p>
+        </div>
       )}
       <p className='text-sm leading-7 text-justify'>{description}</p>
     </div>

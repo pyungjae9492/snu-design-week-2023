@@ -61,5 +61,21 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
+  React.useEffect(() => {
+    async function loadRouteCss(route: string) {
+      if (route === "/works") {
+          console.log("works")
+          // @ts-ignore
+          await import('../styles/project-gallery.css');
+      } else {
+          // @ts-ignore
+          await import('../styles/personal-work.css');
+      }
+    }
+
+    // Call the function to load CSS for the current route
+    loadRouteCss(router.pathname);
+  }, [router.pathname])
+
   return <Component {...pageProps} />
 }

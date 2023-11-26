@@ -1,0 +1,15 @@
+.notion-header,
+.notion-page-icon-image {
+    display: none;
+}
+
+.notion-page-cover-wrapper,
+.notion-page-cover-wrapper img,
+.notion-page-cover-wrapper span
+{
+    width: 100vw;
+    height: 90vh!important;
+    max-height: 90vh!important;
+    max-width: 100vw!important;
+    border-radius: 0px;
+}

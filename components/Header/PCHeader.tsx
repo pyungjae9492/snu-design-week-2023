@@ -66,7 +66,11 @@ export const PCHeader = () => {
     }
 
     return (
-        <div className={`sticky top-0 p-10 w-full sm:hidden flex flex-row justify-between z-10 bg-black ${router.pathname !== "/" && "items-center"}`}>
+        <div className={`top-0 p-10 w-full sm:hidden flex flex-row justify-between z-10 bg-gradient-to-b from-[#000000] to-[#00000000] 
+            ${router.pathname !== "/" && "items-center"}
+            ${router.pathname.includes("works/") ? "fixed": "sticky"}
+          `}
+        >
             <Link href="/">
               {router.pathname !== "/" ? (
                 <Image className="cursor-pointer" src="/header-logo.png" width={200} height={50} alt="logo" />
