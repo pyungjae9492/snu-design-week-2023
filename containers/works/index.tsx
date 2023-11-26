@@ -3,18 +3,16 @@ import React, { useState } from 'react'
 import MenuBar from './fragments/MenuBar'
 import { MobileMenuBar } from './fragments/MobileMenuBar'
 import { MenuExplanation } from './fragments/MenuExplanation'
-import { ProjectImage } from './fragments/ProjectImage'
 import { ProjectGallery } from './fragments/ProjectGallery'
 
 export const WorksContainer = (props) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(true)
-
   const [selectedMenu, setSelectedMenu] = useState('ALL')
 
   return (
-    <div className='w-[90%] mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row lg:mx-10'>
-      <div className='lg:max-w-[35%] lg:h-full lg:pr-[30px] lg:mb-[72px] lg:flex-col lg:relative'>
+    <div className='w-[90%] mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row lg:px-10 overflow-y-hidden'>
+      <div className='lg:max-w-[50%] lg:h-full lg:mb-[72px] lg:flex-col lg:relative'>
         {/*sm메뉴*/}
         <div className='lg:hidden'>
           <MobileMenuBar
@@ -44,18 +42,7 @@ export const WorksContainer = (props) => {
         </div>
       </div>
 
-      <div className='lg:min-w-[60%] lg:h-full lg:overflow-y-auto'>
-        {/* <div className='flex flex-wrap flex-col items-center gap-6 lg:gap-5 lg:grid lg:grid-cols-2'>
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-          <ProjectImage />
-        </div> */}
+      <div className='lg:max-w-[60%] lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'>
         <ProjectGallery {...props} />
       </div>
     </div>

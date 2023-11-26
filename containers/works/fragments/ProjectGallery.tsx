@@ -22,7 +22,6 @@ import { Loading } from '@/components/Loading'
 import { NotionPageHeader } from '@/components/NotionPageHeader'
 import { Page404 } from '@/components/Page404'
 import { PageHead } from '@/components/PageHead'
-import styles from './project-gallery.module.css'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -130,14 +129,6 @@ export const ProjectGallery: React.FC<types.PageProps> = ({
   }
 
   const title = getBlockTitle(block, recordMap) || site.name
-
-  console.log('notion page', {
-    isDev: config.isDev,
-    title,
-    pageId,
-    rootNotionPageId: site.rootNotionPageId,
-    recordMap
-  })
 
   if (!config.isServer) {
     // add important objects to the window global for easy debugging

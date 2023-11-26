@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { PageHead } from '../components/PageHead'
+import { PageHead } from '@/components/PageHead'
 import { Layout } from '@/components/Layout'
 import WorksContainer from 'containers/works'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
@@ -8,7 +8,7 @@ import { domain } from '@/lib/config'
 
 export const getStaticProps = async () => {
   try {
-    const props = await resolveNotionPage(domain)
+    const props = await resolveNotionPage(domain, "f5bf05bd1b6645e0a30963b50f61b0bb")
 
     return { props, revalidate: 10 }
   } catch (err) {
