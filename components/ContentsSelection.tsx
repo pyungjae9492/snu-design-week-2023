@@ -1,4 +1,4 @@
- // TODO: heightByElementSize에 sm일 때 height 적용
+ // TODOsean: heightByElementSize에 sm일 때 height 적용
 
 import { useRouter } from "next/router";
 import React, { useState, useRef } from "react";
