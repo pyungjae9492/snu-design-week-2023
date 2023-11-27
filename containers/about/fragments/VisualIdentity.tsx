@@ -37,7 +37,7 @@ export const VisualIdentity = () => {
                 </p>
             </div>
             <VisualIdentityComponent title={title3} contentsKO={contentsKO3} contentsEN={contentsEN3} />
-            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px] sm:mt-[97px] sm:mb-[120px]" />
+            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px] sm:mt-[97px]" />
         </div>
     );
 }
