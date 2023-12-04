@@ -1,4 +1,9 @@
-export const MenuExplanation = ({selectedMenu}) => {
+interface MenuExplanationProps {
+  isMenuOpen: boolean
+  selectedMenu: string
+}
+export const MenuExplanation = ({ isMenuOpen, selectedMenu }: MenuExplanationProps) => {
+
   let title = ''
   let professor = ''
   let advisor = ''
@@ -63,7 +68,7 @@ export const MenuExplanation = ({selectedMenu}) => {
 
 
   return (
-    <div className='flex flex-col py-6 gap-3 lg:gap-6'>
+    <div className={`flex flex-col py-6 gap-3 lg:gap-6 lg:transition-opacity ${isMenuOpen && "lg:opacity-0 lg:pointer-events-none"}`}>
       <p className='text-3xl font-medium'>{title}</p>
       { selectedMenu !== 'ALL' && (
         <div className='text-sm leading-7'>

@@ -10,8 +10,12 @@ export const WorksContainer = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
   const [selectedMenu, setSelectedMenu] = useState('ALL')
 
+  const notionProps = props[selectedMenu]
+
+  console.log(props[selectedMenu])
+
   return (
-    <div className='w-[90%] mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row lg:px-10 overflow-y-hidden'>
+    <div className={`w-[90%] mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row lg:px-10 sm:pb-20 overflow-y-hidden ${isMenuOpen && "sm:h-[calc(100vh-88px)]"}`}>
       <div className='lg:max-w-[50%] lg:h-full lg:mb-[72px] lg:flex-col lg:relative'>
         {/*sm메뉴*/}
         <div className='lg:hidden'>
@@ -38,12 +42,12 @@ export const WorksContainer = (props) => {
         </div>
         {/*메뉴설명*/}
         <div className='lg:pl-8 lg:pr-[30px] lg:absolute lg:left-8 lg:right-[52px] lg:bottom-0'>
-          {!isMenuOpen && <MenuExplanation selectedMenu={selectedMenu}/>}
+          <MenuExplanation isMenuOpen={isMenuOpen} selectedMenu={selectedMenu}/>
         </div>
       </div>
 
       <div className='lg:max-w-[60%] lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'>
-        <ProjectGallery {...props} />
+        <ProjectGallery {...notionProps} />
       </div>
     </div>
   )
