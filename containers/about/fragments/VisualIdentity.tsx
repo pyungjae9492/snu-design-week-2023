@@ -24,7 +24,7 @@ const VisualIdentityComponent: React.FC<{title: string, contentsKO: string, cont
 
 export const VisualIdentity = () => {
     return (
-        <div className="flex flex-col mt-[96px] sm:mt-[120px]">
+        <div className="flex flex-col mt-[96px] sm:mt-[10px]">
             <VisualIdentityComponent title={title1} contentsKO={contentsKO1} contentsEN={contentsEN1} />
             <img src="/about_visual_identity.png" width="904.001px" height="353.996px" className="self-center mt-[8.32px] mb-[120.5px] sm:mt-[24px] sm:mb-[60px]" />
             <VisualIdentityComponent title={title2} contentsKO={contentsKO2} contentsEN={contentsEN2} />
@@ -37,7 +37,7 @@ export const VisualIdentity = () => {
                 </p>
             </div>
             <VisualIdentityComponent title={title3} contentsKO={contentsKO3} contentsEN={contentsEN3} />
-            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px] sm:mt-[97px] sm:mb-[120px]" />
+            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px] sm:mt-[97px]" />
         </div>
     );
 }
