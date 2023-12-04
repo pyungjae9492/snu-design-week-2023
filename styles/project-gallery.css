@@ -53,20 +53,26 @@
     grid-template-rows: 1fr 1fr;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 9.21%, rgba(0, 0, 0, 0.00) 100%);
     padding: 20px 15px;
+    gap: 2px 20px;
 }
 
 .notion-collection-card-property {
+    position: relative;
     padding: 0px;
     height: fit-content;
 }
 
 .notion-property-text {
+    display: inline-block;
     color: #fff;
     font-weight: 500;
     line-height: 1.5;
     text-align: left;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .notion-page-title-text {
