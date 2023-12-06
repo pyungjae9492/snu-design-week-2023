@@ -18,6 +18,19 @@
     padding-bottom: 0px!important;
     background: #000;
     min-height: 0px;
+    margin: 0px;
+}
+
+.notion-page-no-cover {
+    margin: 20px!important;
+}
+
+.notion-page-content {
+    padding: 0px;
+    padding-bottom: 0px!important;
+    background: #000;
+    min-height: 0px;
+    width: 100%;
 }
 
 .notion-page-scroller {
