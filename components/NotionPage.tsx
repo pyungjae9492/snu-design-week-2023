@@ -37,7 +37,7 @@ const Collection = dynamic(() =>
 )
 
 const CustomCollection = dynamic(() =>
-  import('../notion/third-party/collection').then((m) => m.CustomCollection)
+  import('../notion/third-party/collection').then((m) => m.Collection)
 )
 
 const propertyLastEditedTimeValue = (

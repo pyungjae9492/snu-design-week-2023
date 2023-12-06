@@ -8,7 +8,7 @@ import { getSiteMap } from '@/lib/get-site-map'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
 import { PageBlock, PageProps, Params } from '@/lib/types'
 import { Layout } from '@/components/Layout'
-import { getPageProperty, parsePageId, getPageImageUrls } from 'notion-utils'
+import { getPageProperty, parsePageId } from 'notion-utils'
 import { useRouter } from 'next/router'
 import { Loading } from '@/components/Loading'
 import * as config from '@/lib/config'
@@ -20,7 +20,6 @@ import { WorkExplanation } from 'containers/works/fragments/WorkExplanation'
 
 import otherwork1 from 'public/otherwork1.png'
 import otherwork2 from 'public/otherwork2.png'
-import { getPreviewImageMap } from '@/lib/preview-images'
 import { mapImageUrl } from '@/lib/map-image-url'
 
 export const getStaticProps: GetStaticProps<PageProps, Params> = async (
@@ -78,7 +77,6 @@ export default function NotionDomainDynamicPage(props) {
     );
   }
   const collection = recordMap.collection;
-  const topRef = React.useRef<HTMLDivElement>(null);
   
   // get a item from collection that item.value.parent_id is equal to the dbId
   const pageData = Object.values(collection).find((item: any) => {
@@ -91,19 +89,23 @@ export default function NotionDomainDynamicPage(props) {
     }
   });
 
+  // @ts-ignore
   const schema = pageData?.value.schema || {};
   // convert schema to array w/ name
   const schemaArray = Object.values(schema).map((item) => {
+    // @ts-ignore
     return item.name;
   });
   
   const pageBlock = recordMap.block[pageId].value;
   // get blocks without pageBlock
   const blocks = Object.values(recordMap.block).filter(
+    // @ts-ignore
     (block) => block.value?.id !== pageId
-  );
-  // console.log("BLOCKs", blocks);
-  // get types of blocks
+    );
+    // console.log("BLOCKs", blocks);
+    // get types of blocks
+  // @ts-ignore
   const blockTypes = blocks.map((block) => block.value?.type);
   // print blockTypes
   // console.log("BLOCK TYPES", blockTypes);

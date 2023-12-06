@@ -5,7 +5,6 @@ import { CollectionViewBoard } from './collection-view-board'
 import { CollectionViewGallery } from './collection-view-gallery-carousel'
 import { CollectionViewList } from './collection-view-list'
 import { CollectionViewTable } from './collection-view-table'
-import {CollectionWorksGallery} from './collection-works-gallery'
 
 export const CollectionViewImpl: React.FC<CollectionViewProps> = (props) => {
   const { collectionView } = props
@@ -21,7 +20,7 @@ export const CollectionViewImpl: React.FC<CollectionViewProps> = (props) => {
       return <CollectionViewList {...props} />
 
     case 'board':
-      return <CollectionWorksGallery {...props} />;
+      return <CollectionViewBoard {...props} />;
 
     default:
       console.warn('unsupported collection view', collectionView)

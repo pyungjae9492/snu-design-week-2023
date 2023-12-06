@@ -23,7 +23,7 @@ import { useRouter } from "next/router";
 
 const isServer = typeof window === "undefined";
 
-export const CustomCollection: React.FC<{
+export const Collection: React.FC<{
   block:
     | types.CollectionViewBlock
     | types.CollectionViewPageBlock

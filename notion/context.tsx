@@ -190,7 +190,7 @@ const defaultNotionContext: NotionContext = {
 
 const ctx = React.createContext<NotionContext>(defaultNotionContext)
 
-export const NotionContextProvider: React.FC<PartialNotionContext> = ({
+export const NotionContextProvider: React.FC<any> = ({
   components: themeComponents = {},
   children,
   mapPageUrl,
