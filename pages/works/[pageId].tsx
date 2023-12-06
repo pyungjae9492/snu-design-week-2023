@@ -129,7 +129,7 @@ export default function NotionDomainDynamicPage(props) {
   return (
       <Layout>
           <div 
-            className='w-full aspect-[1/0.8] lg:h-screen bg-blue-600 relative'
+            className='w-full aspect-[1/0.8] sm:max-h-[500px] lg:h-screen bg-blue-600 relative'
             style={{
               backgroundImage: `url(${socialImage})`,
               backgroundSize: 'cover',
