@@ -49,6 +49,20 @@
     }
 }
 
+.notion-collection-header {
+    display: none;
+}
+
+.notion-gallery {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.notion-gallery-view {
+    height: 500px;
+}
+
 .notion-collection-row-property {
     display: none;
 }
