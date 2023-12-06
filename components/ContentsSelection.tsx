@@ -22,7 +22,7 @@ export const ContentsSelection = ({ headingList, contentsByHeading }) => {
     return (
     <>  
         <div className="flex flex-col justify-center items-center">
-            <div className={`flex flex-row w-full max-w-[900px] ${router.pathname === '/program' ? "gap-[158px]" : "gap-[110px]"} sm:hidden`}>
+            <div className={`flex flex-row w-full max-w-[900px] ${router.pathname === '/program' ? "gap-[168px]" : "gap-[110px]"} sm:hidden`}>
                 {headingList.map((heading:string, index:number) => (
                     <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => setSelectedIndex(index)}>
                         <div className="relative">
