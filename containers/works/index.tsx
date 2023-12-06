@@ -12,10 +12,8 @@ export const WorksContainer = (props) => {
 
   const notionProps = props[selectedMenu]
 
-  console.log(props[selectedMenu])
-
   return (
-    <div className={`w-full mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row lg:px-10 sm:pb-20 overflow-y-hidden ${isMenuOpen && "sm:h-[calc(100vh-88px)]"}`}>
+    <div className={`w-full sm:max-w-[640px] mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row px-7 lg:px-10 sm:pb-20 overflow-y-hidden ${isMenuOpen && "sm:h-[calc(100vh-88px)]"}`}>
       <div className='lg:max-w-[50%] lg:h-full lg:mb-[72px] lg:flex-col lg:relative'>
         {/*sm메뉴*/}
         <div className='lg:hidden'>
@@ -46,7 +44,7 @@ export const WorksContainer = (props) => {
         </div>
       </div>
 
-      <div className='lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'>
+      <div className='lg:w-full lg:max-w-[60%] lg:h-full lg:overflow-y-auto scrollbar-hide'>
         <ProjectGallery {...notionProps} />
       </div>
     </div>

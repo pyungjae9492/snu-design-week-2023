@@ -36,6 +36,10 @@ const Collection = dynamic(() =>
   )
 )
 
+const CustomCollection = dynamic(() =>
+  import('../notion/third-party/collection').then((m) => m.Collection)
+)
+
 const propertyLastEditedTimeValue = (
   { block, pageHeader },
   defaultFn: () => React.ReactNode
@@ -86,8 +90,19 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const router = useRouter()
   const lite = useSearchParam('lite')
 
-  const components = React.useMemo(
-    () => ({
+  const components = React.useMemo(() => {
+    if (router.pathname.includes("works/")) {
+      return ({
+        nextImage: Image,
+        nextLink: Link,
+        Collection: CustomCollection,
+        Header: NotionPageHeader,
+        propertyLastEditedTimeValue,
+        propertyTextValue,
+        propertyDateValue
+      })
+    }
+    return ({
       nextImage: Image,
       nextLink: Link,
       Collection,
@@ -95,9 +110,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
       propertyLastEditedTimeValue,
       propertyTextValue,
       propertyDateValue
-    }),
-    []
-  )
+    })
+  }, [router])
 
   // lite mode is for oembed
   const isLiteMode = lite === 'true'

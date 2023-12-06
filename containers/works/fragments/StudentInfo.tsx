@@ -2,21 +2,21 @@ import Image from 'next/image'
 
 import projectcover from 'public/projectcover.png'
 
-export const StudentInfo = () => {
+export const StudentInfo = (props) => {
   return (
     <div className='flex flex-col lg:flex-row w-full justify-between gap-6'>
       <div className='flex flex-col gap-6 lg:gap-11'>
         <p className='text-2xl lg:text-5xl font-medium lg:font-normal'>
-            홍길동
+            {props['designer-name-ko']}
         </p>
         <div className='flex flex-row gap-[68px] lg:gap-[150px]'>
           <div className='flex flex-col gap-4'>
               <p className='text-[#6F6F6F] text-base'>EMAIL</p>
-              <p className='text-sm font-medium'>hongildong@gmail.com</p>
+              <p className='text-sm font-medium'>{props['email']}</p>
           </div>
           <div className='flex flex-col gap-4'>
               <p className='text-[#6F6F6F] text-base'>INSTAGRAM</p>
-              <p className='text-sm font-medium'>@hongildong</p>
+              <p className='text-sm font-medium'>{props['instagram']}</p>
           </div>
         </div>
       </div>
