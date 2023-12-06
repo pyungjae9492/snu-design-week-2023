@@ -1,4 +1,4 @@
-const team1 = "2023 졸업주간 준비위원회";
+const team1 = "2023 졸업전시준비위원회";
 const teamExplain1 = "졸업주간 준비위원회는 SNU DESIGN WEEK 2023의 기획과 운영을 담당하는 학생 위원회로, 총 33명의 디자인과 학생들로 구성되어 있습니다. 졸업주간 준비위원회는 서로에게 긍정적인 영향을 줄 수 있는 건강하고 평등한 조직을 지향합니다.";
 const teamMates1 = "졸업주간 준비위원장 | 금민정\n산업디자인 부위원장 | 김가은\n시각디자인 부위원장 | 김수현";
 
@@ -22,7 +22,7 @@ const teamMember4 = "김채원 신혜원 엄혜영";
 
 const team5 = "도록팀";
 const teamExplain5 = "친환경 인증을 받은 지류 사용을 통해 지속가능한 제작 방법을 고려하고 도록을 통해 기록하고 탐색하고 발견하는 행위의 주목하는 이들의 이야기를 담았습니다.";
-const teamMates5 = "팀장 | 김서영\n팀원 | 김수현 송나윤 윤희경";
+const teamMates5 = "팀장 | 김서영\n팀원 | 김수현 송나윤";
 const teamLeader5 = "김서영";
 const teamMember5 = "김수현 송나윤 윤희경";
 
@@ -69,7 +69,7 @@ const teamLeader12 = "김은주";
 const teamMember12 = "";
 
 const team13 = "번역팀";
-const teamExplain13 = "TODO - 번역팀 설명 필요";
+const teamExplain13 = "SNUD 2023의 전시문안을 영문으로 번역하였습니다.";
 const teamMates13 = "팀장 | 김유로 전유정";
 const teamLeader13 = "김유로 전유정";
 const teamMember13 = "";
