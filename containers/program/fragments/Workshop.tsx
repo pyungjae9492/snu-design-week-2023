@@ -11,7 +11,7 @@ export const Workshop = () => {
             <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px] sm:text-[24px] sm:font-semibold sm:leading-[32px] sm:tracking-normal">워크샵<br/><span className="sm:font-medium sm:leading-[30px]">Workshop</span></p>
 
             <div className="flex flex-row gap-[121px] mb-[399px] sm:flex-col sm:gap-0">
-                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[45%] whitespace-pre-line sm:w-full">{workshopDetail}</p>
+                <p className="text-white text-[15px] leading-[30px] tracking-[-0.165px] font-normal w-[45%] whitespace-pre-line sm:text-[14px] sm:w-full">{workshopDetail}</p>
                 <div className="lg:hidden mt-[50px] mb-[50px] self-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="294" height="2" viewBox="0 0 294 2" fill="none">
                     <path d="M0 1H294" stroke="url(#paint0_linear_818_38651)" stroke-width="2"/>
