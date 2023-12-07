@@ -14,7 +14,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(500px);
+    transform: translateX(750px);
     opacity: 1;
   }
 }
@@ -61,7 +61,6 @@
 .ALLSHOWN {
   animation: allshown 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
-
 @keyframes brand {
   0% {
     transform: translateX(500px) rotate(0deg);
@@ -88,6 +87,16 @@
   100% {
     transform: translateX(500px) rotate(0deg);
     opacity: 1;
+  }
+}
+@keyframes brandstill {
+  0% {
+    transform: rotate(7deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(7deg) translateX(750px);
+    opacity: 0.7;
   }
 }
 @keyframes brandr {
@@ -121,6 +130,7 @@
 }
 .BRAND,
 .BRANDS,
+.BRANDSTILL,
 .BRANDR,
 .BRANDSHOWN {
   width: 370px;
@@ -134,6 +144,9 @@
 }
 .BRANDS {
   animation: brands 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.BRANDSTILL {
+  animation: brandstill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .BRANDR {
   animation: brandr 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -170,6 +183,16 @@
     opacity: 1;
   }
 }
+@keyframes uxuistill {
+  0% {
+    transform: rotate(14deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(14deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes uxuir {
   0% {
     transform: rotate(14deg) translateX(750px);
@@ -201,6 +224,7 @@
 }
 .UXUI,
 .UXUIS,
+.UXUISTILL,
 .UXUIR,
 .UXUISHOWN {
   width: 370px;
@@ -214,6 +238,9 @@
 }
 .UXUIS {
   animation: uxuis 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.UXUISTILL {
+  animation: uxuistill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .UXUIR {
   animation: uxuir 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -250,6 +277,16 @@
     opacity: 1;
   }
 }
+@keyframes mediastill {
+  0% {
+    transform: rotate(21deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(21deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes mediar {
   0% {
     transform: rotate(21deg) translateX(750px);
@@ -281,6 +318,7 @@
 }
 .MEDIA,
 .MEDIAS,
+.MEDIASTILL,
 .MEDIAR,
 .MEDIASHOWN {
   width: 370px;
@@ -294,6 +332,9 @@
 }
 .MEDIAS {
   animation: medias 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.MEDIASTILL {
+  animation: mediastill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .MEDIAR {
   animation: mediar 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -330,6 +371,16 @@
     opacity: 1;
   }
 }
+@keyframes graphicstill {
+  0% {
+    transform: rotate(28deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(28deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes graphicr {
   0% {
     transform: rotate(28deg) translateX(750px);
@@ -361,6 +412,7 @@
 }
 .GRAPHIC,
 .GRAPHICS,
+.GRAPHICSTILL,
 .GRAPHICR,
 .GRAPHICSHOWN {
   width: 370px;
@@ -374,6 +426,9 @@
 }
 .GRAPHICS {
   animation: graphics 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.GRAPHICSTILL {
+  animation: graphicstill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .GRAPHICR {
   animation: graphicr 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -410,6 +465,16 @@
     opacity: 1;
   }
 }
+@keyframes productstill {
+  0% {
+    transform: rotate(35deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(35deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes productr {
   0% {
     transform: rotate(35deg) translateX(750px);
@@ -441,6 +506,7 @@
 }
 .PRODUCT,
 .PRODUCTS,
+.PRODUCTSTILL,
 .PRODUCTR,
 .PRODUCTSHOWN {
   width: 370px;
@@ -454,6 +520,9 @@
 }
 .PRODUCTS {
   animation: products 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.PRODUCTSTILL {
+  animation: productstill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .PRODUCTR {
   animation: productr 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -490,6 +559,16 @@
     opacity: 1;
   }
 }
+@keyframes livingstill {
+  0% {
+    transform: rotate(42deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(42deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes livingr {
   0% {
     transform: rotate(42deg) translateX(750px);
@@ -521,6 +600,7 @@
 }
 .LIVING,
 .LIVINGS,
+.LIVINGSTILL,
 .LIVINGR,
 .LIVINGSHOWN {
   width: 370px;
@@ -534,6 +614,9 @@
 }
 .LIVINGS {
   animation: livings 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.LIVINGSTILL {
+  animation: livingstill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .LIVINGR {
   animation: livingr 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -570,6 +653,16 @@
     opacity: 1;
   }
 }
+@keyframes mobilitystill {
+  0% {
+    transform: rotate(49deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(49deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes mobilityr {
   0% {
     transform: rotate(49deg) translateX(750px);
@@ -601,6 +694,7 @@
 }
 .MOBILITY,
 .MOBILITYS,
+.MOBILITYSTILL,
 .MOBILITYR,
 .MOBILITYSHOWN {
   width: 370px;
@@ -614,6 +708,9 @@
 }
 .MOBILITYS {
   animation: mobilitys 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.MOBILITYSTILL {
+  animation: mobilitystill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .MOBILITYR {
   animation: mobilityr 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
@@ -650,6 +747,16 @@
     opacity: 1;
   }
 }
+@keyframes spacestill {
+  0% {
+    transform: rotate(56deg) translateX(750px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(56deg) translateX(750px);
+    opacity: 0.7;
+  }
+}
 @keyframes spacer {
   0% {
     transform: rotate(56deg) translateX(750px);
@@ -681,6 +788,7 @@
 }
 .SPACE,
 .SPACES,
+.SPACESTILL,
 .SPACER,
 .SPACESHOWN {
   width: 370px;
@@ -694,6 +802,9 @@
 }
 .SPACES {
   animation: spaces 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
+}
+.SPACESTILL {
+  animation: spacestill 1s cubic-bezier(.45,.45,.13, 1.00) forwards;
 }
 .SPACER {
   animation: spacer 1s cubic-bezier(.45,.45,.13, 1.00) forwards;

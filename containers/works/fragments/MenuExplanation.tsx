@@ -10,10 +10,6 @@ export const MenuExplanation = ({ isMenuOpen, selectedMenu }: MenuExplanationPro
   let description = ''
 
   switch (selectedMenu) {
-    case 'ALL':
-      description =
-        '서로 다른 목적을 향해 나아가던 우리는 한 단계 도약해 다시 각자의 길로 나아가기 전 SNU DESIGN WEEK에서 마지막으로 다함께 마주칩니다. 이 찰나의 대단한 마주침을 ‘The Great Bump’라는 충돌 사건으로 명명하고 이를 깊이 들여다보고자 합니다. 이 한 번의 뜨거운 충돌이 새로운 추진력으로 작용하길 바라며, ‘The Great Bump’를 관측해 전달합니다.';
-      break;
     case 'GRAPHIC':
       title = '그래픽디자인프로젝트'
       professor = '배민기'

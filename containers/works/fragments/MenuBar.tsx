@@ -124,30 +124,30 @@ export default function MenuBar(props) {
             <AfterOpenMenu menu='ALL' />
           </div>
           <div
-            className={focusedMenu === 'BRAND' ? styles.BRANDS : styles.BRANDR}
+            className={focusedMenu === 'ALL' ? styles.BRANDSTILL : focusedMenu === 'BRAND' ? styles.BRANDS : styles.BRANDR}
           >
             <AfterOpenMenu menu='BRAND' />
           </div>
           <div
-            className={focusedMenu === 'UX/UI' ? styles.UXUIS : styles.UXUIR}
+            className={focusedMenu === 'ALL' ? styles.UXUISTILL :focusedMenu === 'UX/UI' ? styles.UXUIS : styles.UXUIR}
           >
             <AfterOpenMenu menu='UX/UI' />
           </div>
           <div
-            className={focusedMenu === 'MEDIA' ? styles.MEDIAS : styles.MEDIAR}
+            className={focusedMenu === 'ALL' ? styles.MEDIASTILL :focusedMenu === 'MEDIA' ? styles.MEDIAS : styles.MEDIAR}
           >
             <AfterOpenMenu menu='MEDIA' />
           </div>
           <div
             className={
-              focusedMenu === 'GRAPHIC' ? styles.GRAPHICS : styles.GRAPHICR
+              focusedMenu === 'ALL' ? styles.GRAPHICSTILL :focusedMenu === 'GRAPHIC' ? styles.GRAPHICS : styles.GRAPHICR
             }
           >
             <AfterOpenMenu menu='GRAPHIC' />
           </div>
           <div
             className={
-              focusedMenu === 'PRODUCT INTERACTION'
+              focusedMenu === 'ALL' ? styles.PRODUCTSTILL :focusedMenu === 'PRODUCT INTERACTION'
                 ? styles.PRODUCTS
                 : styles.PRODUCTR
             }
@@ -156,20 +156,20 @@ export default function MenuBar(props) {
           </div>
           <div
             className={
-              focusedMenu === 'LIVING' ? styles.LIVINGS : styles.LIVINGR
+              focusedMenu === 'ALL' ? styles.LIVINGSTILL : focusedMenu === 'LIVING' ? styles.LIVINGS : styles.LIVINGR
             }
           >
             <AfterOpenMenu menu='LIVING' />
           </div>
           <div
             className={
-              focusedMenu === 'MOBILITY' ? styles.MOBILITYS : styles.MOBILITYR
+              focusedMenu === 'ALL' ? styles.MOBILITYSTILL :focusedMenu === 'MOBILITY' ? styles.MOBILITYS : styles.MOBILITYR
             }
           >
             <AfterOpenMenu menu='MOBILITY' />
           </div>
           <div
-            className={focusedMenu === 'SPACE' ? styles.SPACES : styles.SPACER}
+            className={focusedMenu === 'ALL' ? styles.SPACESTILL :focusedMenu === 'SPACE' ? styles.SPACES : styles.SPACER}
           >
             <AfterOpenMenu menu='SPACE' />
           </div>
