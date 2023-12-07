@@ -66,3 +66,16 @@
 .notion-collection-row-property {
     display: none;
 }
+
+@media (max-width: 1000px) {
+    .notion-row .notion-column {
+        width: 50% !important;
+    }
+    .notion-row {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .notion-blank {
+        display: none;
+    }
+}
