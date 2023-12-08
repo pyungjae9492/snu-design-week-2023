@@ -45,9 +45,15 @@ export default function MenuBar(props) {
   )
 
   const onSelectMenu = (menu: string) => {
+    if (menu === 'ALL') {
+      setIsMenuOpen(isMenuOpen)
+      setSelectedMenu('ALL')
+      setOnlyShown('ALL')
+      return
+    }
     setIsMenuOpen(!isMenuOpen)
     setSelectedMenu(menu)
-    setSelectedMenu(menu)
+
   }
 
   const reselectMenu = (menu: string) => {
@@ -65,27 +71,27 @@ export default function MenuBar(props) {
       {isMenuOpen ? (
         <div className='absolute top-0 -left-[500px] z-50'>
           <div 
-            className={onlyShown === 'ALL' ? styles.ALLSHOWN : styles.ALL}
+            className={onlyShown === 'ALL' ? styles.ALLS : styles.ALL}
           >
             <CircleMenu menu='ALL' isFocused={focusedMenu === 'ALL'}/>
           </div>
           <div
-            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : styles.BRAND}
+            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : onlyShown === 'ALL' ? styles.BRANDSTILL : styles.BRAND}
           >
             <CircleMenu menu='BRAND' isFocused={focusedMenu === 'BRAND'}/>
           </div>
           <div
-            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : styles.UXUI}
+            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : onlyShown === 'ALL' ? styles.UXUISTILL : styles.UXUI}
           >
             <CircleMenu menu='UX/UI' isFocused={focusedMenu === 'UX/UI'}/>
           </div>
           <div
-            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : styles.MEDIA}
+            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : onlyShown === 'ALL' ? styles.MEDIASTILL : styles.MEDIA}
           >
             <CircleMenu menu='MEDIA' isFocused={focusedMenu === 'MEDIA'}/>
           </div>
           <div
-            className={onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : styles.GRAPHIC}
+            className={onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : onlyShown === 'ALL' ? styles.GRAPHICSTILL : styles.GRAPHIC}
           >
             <CircleMenu menu='GRAPHIC' isFocused={focusedMenu === 'GRAPHIC'}/>
           </div>
@@ -93,27 +99,27 @@ export default function MenuBar(props) {
             className={
               onlyShown === 'PRODUCT INTERACTION'
                 ? styles.PRODUCTSHOWN
-                : styles.PRODUCT
+                : onlyShown === 'ALL' ? styles.PRODUCTSTILL : styles.PRODUCT
             }
           >
             <CircleMenu menu='PRODUCT INTERACTION' isFocused={focusedMenu === 'PRODUCT INTERACTION'}/>
           </div>
           <div
             className={
-              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : styles.LIVING
+              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : onlyShown === 'ALL' ? styles.LIVINGSTILL : styles.LIVING
             }
           >
             <CircleMenu menu='LIVING' isFocused={focusedMenu === 'LIVING'}/>
           </div>
           <div
             className={
-              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : styles.MOBILITY
+              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : onlyShown === 'ALL' ? styles.MOBILITY : styles.MOBILITY
             }
           >
             <CircleMenu menu='MOBILITY' isFocused={focusedMenu === 'MOBILITY'}/>
           </div>
           <div
-            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : styles.SPACE}
+            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : onlyShown === 'ALL' ? styles.SPACESTILL : styles.SPACE}
           >
             <CircleMenu menu='SPACE' isFocused={focusedMenu === 'SPACE'}/>
           </div>
@@ -124,30 +130,30 @@ export default function MenuBar(props) {
             <AfterOpenMenu menu='ALL' />
           </div>
           <div
-            className={focusedMenu === 'ALL' ? styles.BRANDSTILL : focusedMenu === 'BRAND' ? styles.BRANDS : styles.BRANDR}
+            className={focusedMenu === 'BRAND' ? styles.BRANDS : styles.BRANDR}
           >
             <AfterOpenMenu menu='BRAND' />
           </div>
           <div
-            className={focusedMenu === 'ALL' ? styles.UXUISTILL :focusedMenu === 'UX/UI' ? styles.UXUIS : styles.UXUIR}
+            className={focusedMenu === 'UX/UI' ? styles.UXUIS : styles.UXUIR}
           >
             <AfterOpenMenu menu='UX/UI' />
           </div>
           <div
-            className={focusedMenu === 'ALL' ? styles.MEDIASTILL :focusedMenu === 'MEDIA' ? styles.MEDIAS : styles.MEDIAR}
+            className={focusedMenu === 'MEDIA' ? styles.MEDIAS : styles.MEDIAR}
           >
             <AfterOpenMenu menu='MEDIA' />
           </div>
           <div
             className={
-              focusedMenu === 'ALL' ? styles.GRAPHICSTILL :focusedMenu === 'GRAPHIC' ? styles.GRAPHICS : styles.GRAPHICR
+              focusedMenu === 'GRAPHIC' ? styles.GRAPHICS : styles.GRAPHICR
             }
           >
             <AfterOpenMenu menu='GRAPHIC' />
           </div>
           <div
             className={
-              focusedMenu === 'ALL' ? styles.PRODUCTSTILL :focusedMenu === 'PRODUCT INTERACTION'
+              focusedMenu === 'PRODUCT INTERACTION'
                 ? styles.PRODUCTS
                 : styles.PRODUCTR
             }
@@ -156,20 +162,20 @@ export default function MenuBar(props) {
           </div>
           <div
             className={
-              focusedMenu === 'ALL' ? styles.LIVINGSTILL : focusedMenu === 'LIVING' ? styles.LIVINGS : styles.LIVINGR
+              focusedMenu === 'LIVING' ? styles.LIVINGS : styles.LIVINGR
             }
           >
             <AfterOpenMenu menu='LIVING' />
           </div>
           <div
             className={
-              focusedMenu === 'ALL' ? styles.MOBILITYSTILL :focusedMenu === 'MOBILITY' ? styles.MOBILITYS : styles.MOBILITYR
+              focusedMenu === 'MOBILITY' ? styles.MOBILITYS : styles.MOBILITYR
             }
           >
             <AfterOpenMenu menu='MOBILITY' />
           </div>
           <div
-            className={focusedMenu === 'ALL' ? styles.SPACESTILL :focusedMenu === 'SPACE' ? styles.SPACES : styles.SPACER}
+            className={focusedMenu === 'SPACE' ? styles.SPACES : styles.SPACER}
           >
             <AfterOpenMenu menu='SPACE' />
           </div>

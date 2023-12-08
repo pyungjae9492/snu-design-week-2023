@@ -92,11 +92,11 @@
 @keyframes brandstill {
   0% {
     transform: rotate(7deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(7deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes brandr {
@@ -186,11 +186,11 @@
 @keyframes uxuistill {
   0% {
     transform: rotate(14deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(14deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes uxuir {
@@ -280,11 +280,11 @@
 @keyframes mediastill {
   0% {
     transform: rotate(21deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(21deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes mediar {
@@ -374,11 +374,11 @@
 @keyframes graphicstill {
   0% {
     transform: rotate(28deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(28deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes graphicr {
@@ -468,11 +468,11 @@
 @keyframes productstill {
   0% {
     transform: rotate(35deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(35deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes productr {
@@ -562,11 +562,11 @@
 @keyframes livingstill {
   0% {
     transform: rotate(42deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(42deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes livingr {
@@ -656,11 +656,11 @@
 @keyframes mobilitystill {
   0% {
     transform: rotate(49deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(49deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes mobilityr {
@@ -750,11 +750,11 @@
 @keyframes spacestill {
   0% {
     transform: rotate(56deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
   100% {
     transform: rotate(56deg) translateX(750px);
-    opacity: 0.7;
+    opacity: 70;
   }
 }
 @keyframes spacer {
