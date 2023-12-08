@@ -60,7 +60,7 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: fit-content;
+    height: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -88,13 +88,32 @@
     text-overflow: ellipsis;
 }
 
+.notion-property-title {
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.1em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
 .notion-page-title-text {
+    display: inline-block;
     color: #FFF;
     font-family: Pretendard;
     font-size: 16px!important;
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .notion-collection-card-property:nth-child(1) {
