@@ -75,7 +75,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     // Call the function to load CSS for the current route
     loadRouteCss(router.pathname);
-  }, [router.pathname])
+  }, [router])
 
   return <Component {...pageProps} />
 }
