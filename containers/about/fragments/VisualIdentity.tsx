@@ -1,3 +1,7 @@
+import motionPoster from '@/public/about_motion_poster.json'
+import { Player } from "@lottiefiles/react-lottie-player"
+import { useRef } from "react"
+
 const title1 = "전시 비주얼 아이덴티티";
 const contentsKO1 = "‘찰나의 뜨거운 충돌 사건'인 ‘THE GREAT BUMP’를 별들의 충돌이라는 모티브를 통해 시각화했습니다. 포스터의 메인 그래픽은 우주공간 속 별들을 연상시키는 동시에 충돌지점으로 뻗어나가는 졸업전시자 개개인을 상징합니다. 우주와 별이라는 거대한 스케일감의 메타포를 통해 SNUD 2023의 폭발적인 에너지를 전달합니다.";
 const contentsEN1 = "'The Great Bump,' an instance of 'momentous collision,' has been artistically represented using the metaphor of celestial star collisions. The prominent graphic featured on the poster draws inspiration from the appearance of stars in the vast expanse of outer space, signifying the individual journey of each graduating student as they reach the point of collision and radiate outwards. This grand-scale metaphor of the cosmos and its stars vividly conveys the explosive energy encapsulated within SNU DESIGN WEEK 2023.";
@@ -23,6 +27,8 @@ const VisualIdentityComponent: React.FC<{title: string, contentsKO: string, cont
 }
 
 export const VisualIdentity = () => {
+    const lottieRef = useRef(null);
+
     return (
         <div className="flex flex-col mt-[96px] sm:mt-[10px]">
             <VisualIdentityComponent title={title1} contentsKO={contentsKO1} contentsEN={contentsEN1} />
@@ -37,7 +43,19 @@ export const VisualIdentity = () => {
                 </p>
             </div>
             <VisualIdentityComponent title={title3} contentsKO={contentsKO3} contentsEN={contentsEN3} />
-            <img src="/about_motion_poster.png" width="612px" height="863px" className="self-center mt-[17.82px] mb-[294.36px] sm:mt-[97px]" />
+            <div className='w-[612px] h-[863px] self-center mt-[82px] mb-[294.36px] sm:mt-[97px] sm:mb-[120px] sm:w-[243px] sm:h-[343px]'>
+                <Player
+                    speed={2}
+                    autoplay={true}
+                    loop={true}
+                    controls={false}
+                    keepLastFrame={true}
+                    lottieRef={(ref) => {
+                        if (ref) lottieRef.current = ref;
+                    }}
+                    src={motionPoster}
+                />
+            </div>
         </div>
     );
 }
