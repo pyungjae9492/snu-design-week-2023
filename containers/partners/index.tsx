@@ -4,7 +4,7 @@ import { Card } from "./fragments/Card"
 const PartnersData = [
     {
         "logo": "pxd",
-        "description": "pxd는 사람(people)과 디지털미래(digital future)를 행복한 경험(experience)로 연결합니다.  web 2.0 시대에 치열하게 고민했던 최고의 UX/UI 경험을 바탕으로, 블록체인 기술 기반의 WEB3 시대를 맞아 사용자경험디자인의 새로운 역할을 찾기 위한 가슴 설레는 여정을 시작하였습니다.",
+        "description": "pxd는 사람(people)과 디지털미래(digital future)를 행복한 경험(experience)로 연결합니다.  web 2.0 시대에 치열하게 고민했던 최고의 UX/UI 경험을 바탕으로, 블록체인 기술 기반의 WEB3 시대를 맞아 사용자경험디자인의 새로운 역할을 찾기 위한 가슴 설레는 여정을 시작하였습니다.",
     },
     {
         "logo": "yoondesigngroup",
@@ -31,17 +31,17 @@ const PartnersData = [
         "description": "사람들의 목표 달성을 효과적으로 돕기 위해 탄생한 모트모트입니다. 서비스의 형태를 국한하지 않고 아날로그 플래너부터 올클 앱 서비스, 커뮤니티, 콘텐츠 등을 만들며 사용자들의 성장을 돕고 있습니다."
     },
     {
-        "logo": "naver",
-        // TODO: Change description
-        "description": "사람들의 목표 달성을 효과적으로 돕기 위해 탄생한 모트모트입니다. 서비스의 형태를 국한하지 않고 아날로그 플래너부터 올클 앱 서비스, 커뮤니티, 콘텐츠 등을 만들며 사용자들의 성장을 돕고 있습니다.",
-    },
-    {
         "logo": "josephstacey",
         "description": "A GOOD BAG, A GOOD LIFE\n가장 아름다운 것. 가장 실용적인 것을 위한 탐구. 우리는 라이프와 디자인 사이에서 가치를 찾습니다. 일상에서 영감을 얻어 실용성과 아름다움이 공존하도록 디자인합니다. 기능의 본질을 집요하게 탐구하고 극도의 심플함으로 단순화하면 마침내 생활을 이해한 궁극의 아름다움을 만납니다. 플리츠 기술력을 바탕으로 컬러의 다양함을 구현하며 새로운 기술과 소재를 찾아 지속 가능한 친환경 디자인을 추구합니다"
     },
     {
         "logo": "sungwonadpia",
         "description": "성원애드피아는 인쇄 관련 모든 디자인 컨설팅과 기획, 제작, 배송에 이르기까지 전 공정에 자동화된 원스톱(One-Stop) 시스템을 도입함으로써 한 차원 높고, 차별화된 서비스를 고객에게 제공하고 있습니다.\n\n애드피아몰은 홍보 및 전시 목적으로 포스터, 배너, 현수막, 등신대 등 다양한 인쇄물을 제작할 수 있는 쇼핑몰입니다. ‘인쇄는 쇼핑이다’라는 슬로건 아래 누구나 쉽고 편리하게 이용할 수 있는 장을 제공합니다."
+    },
+    {
+        "logo": "naver",
+        // TODO: Change description
+        "description": "네이버는 수많은 SME와 창작자, 파트너들이 미래 기술을 활용해글로벌 시장에서 더 큰 성장을 이룰 수 있도록 지원하는 글로벌 테크 플랫폼입니다.",
     },
     {
         "logo": "beattitude",
@@ -75,6 +75,7 @@ export const PartnersContainer: React.FC = () => {
             <div className="flex flex-col lg:grid lg:grid-cols-3 w-full h-full max-w-[290px] lg:max-w-[870px] lg:gap-2 border-collapse pb-40">
                 {PartnersData.map((data, index) => (
                     <Card
+                        index={index}
                         key={"partners-logo-" + index}
                         logo={data.logo}
                         description={data.description}

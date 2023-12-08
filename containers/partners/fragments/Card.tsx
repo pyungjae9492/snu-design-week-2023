@@ -1,15 +1,19 @@
 import Image from "next/image";
 
 interface CardProps {
+    index: number;
     logo: string;
     description: string;
 }
 
 export const Card = (props: CardProps) => {
-    const { logo, description } = props;
+    const { index, logo, description } = props;
+
+    const twoCol = index === 7 || index === 8
+
     return (
-        <td className="flex flex-col max-w-[290px] items-center justify-between w-full p-4 shrink-0 border-[0.5px] border-white h-fit">
-            <div className="relative flex justify-center items-center h-[125px] shrink-0">
+        <td className={`flex flex-col max-w-[290px] items-center justify-between w-full p-4 shrink-0 border-[0.5px] border-white h-fit ${twoCol && "row-span-2"}`}>
+            <div className="relative flex justify-center items-center h-[140px] shrink-0">
                 {logo === "pxd" && <PxdLogo />}
                 {logo === "yoondesigngroup" && <YoondesigngroupLogo />}
                 {logo === "sandollcloud" && <SandollcloudLogo />}
@@ -24,7 +28,7 @@ export const Card = (props: CardProps) => {
                 {logo === "moorim" && <MoorimLogo />}
                 {logo === "snudesignalumni" && <SnudesignalumniLogo />}
             </div>
-            <div className="flex flex-1 justify-center items-start min-h-[125px] shrink-0">
+            <div className="flex flex-1 justify-center min-h-[125px] shrink-0 items-center">
                 <p className="text-xs leading-[18px] whitespace-break-spaces">
                     {description}
                 </p>
