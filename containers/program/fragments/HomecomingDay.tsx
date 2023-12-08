@@ -3,7 +3,7 @@ const homecomingDayDetails = "일정 | 12.01 (금) 19:00 - 20:00 \n장소 | 서�
 export const HomecomingDay = () => {
     return (
         <div className="flex flex-col">
-            <img src="/program_img.png" className="w-full h-[543.337px] flex-shrink-0 bg-[#FFFFFF] mt-[80.29px] mb-[56.66px] self-center sm:h-[199px]" />
+            <img src="/hi_day.png" className="w-full h-[543.337px] flex-shrink-0 bg-[#FFFFFF] mt-[80.29px] mb-[56.66px] self-center sm:h-[199px]" />
             <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px] sm:text-[24px] sm:font-semibold sm:leading-[32px] sm:tracking-normal">하이 데이<br/><span className="sm:font-medium sm:leading-[30px]">Hi day</span></p>
 
             <p className="w-[45%] text-[#FFF] text-[15px] leading-[30px] tracking-[-0.165px] mb-[286px] whitespace-pre-line sm:w-full sm:text-[14px] sm:font-medium sm:leading-[28px] sm:tracking-[-0.154px]">{homecomingDayDetails}</p>
