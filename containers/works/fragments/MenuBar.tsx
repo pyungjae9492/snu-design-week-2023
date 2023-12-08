@@ -45,9 +45,15 @@ export default function MenuBar(props) {
   )
 
   const onSelectMenu = (menu: string) => {
+    if (menu === 'ALL') {
+      setIsMenuOpen(isMenuOpen)
+      setSelectedMenu('ALL')
+      setOnlyShown('ALL')
+      return
+    }
     setIsMenuOpen(!isMenuOpen)
     setSelectedMenu(menu)
-    setSelectedMenu(menu)
+
   }
 
   const reselectMenu = (menu: string) => {
@@ -65,27 +71,27 @@ export default function MenuBar(props) {
       {isMenuOpen ? (
         <div className='absolute top-0 -left-[500px] z-50'>
           <div 
-            className={onlyShown === 'ALL' ? styles.ALLSHOWN : styles.ALL}
+            className={onlyShown === 'ALL' ? styles.ALLS : styles.ALL}
           >
             <CircleMenu menu='ALL' isFocused={focusedMenu === 'ALL'}/>
           </div>
           <div
-            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : styles.BRAND}
+            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : onlyShown === 'ALL' ? styles.BRANDSTILL : styles.BRAND}
           >
             <CircleMenu menu='BRAND' isFocused={focusedMenu === 'BRAND'}/>
           </div>
           <div
-            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : styles.UXUI}
+            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : onlyShown === 'ALL' ? styles.UXUISTILL : styles.UXUI}
           >
             <CircleMenu menu='UX/UI' isFocused={focusedMenu === 'UX/UI'}/>
           </div>
           <div
-            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : styles.MEDIA}
+            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : onlyShown === 'ALL' ? styles.MEDIASTILL : styles.MEDIA}
           >
             <CircleMenu menu='MEDIA' isFocused={focusedMenu === 'MEDIA'}/>
           </div>
           <div
-            className={onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : styles.GRAPHIC}
+            className={onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : onlyShown === 'ALL' ? styles.GRAPHICSTILL : styles.GRAPHIC}
           >
             <CircleMenu menu='GRAPHIC' isFocused={focusedMenu === 'GRAPHIC'}/>
           </div>
@@ -93,27 +99,27 @@ export default function MenuBar(props) {
             className={
               onlyShown === 'PRODUCT INTERACTION'
                 ? styles.PRODUCTSHOWN
-                : styles.PRODUCT
+                : onlyShown === 'ALL' ? styles.PRODUCTSTILL : styles.PRODUCT
             }
           >
             <CircleMenu menu='PRODUCT INTERACTION' isFocused={focusedMenu === 'PRODUCT INTERACTION'}/>
           </div>
           <div
             className={
-              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : styles.LIVING
+              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : onlyShown === 'ALL' ? styles.LIVINGSTILL : styles.LIVING
             }
           >
             <CircleMenu menu='LIVING' isFocused={focusedMenu === 'LIVING'}/>
           </div>
           <div
             className={
-              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : styles.MOBILITY
+              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : onlyShown === 'ALL' ? styles.MOBILITY : styles.MOBILITY
             }
           >
             <CircleMenu menu='MOBILITY' isFocused={focusedMenu === 'MOBILITY'}/>
           </div>
           <div
-            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : styles.SPACE}
+            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : onlyShown === 'ALL' ? styles.SPACESTILL : styles.SPACE}
           >
             <CircleMenu menu='SPACE' isFocused={focusedMenu === 'SPACE'}/>
           </div>
