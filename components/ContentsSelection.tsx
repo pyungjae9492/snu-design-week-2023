@@ -90,7 +90,7 @@ export const ContentsSelection = ({ headingList, contentsByHeading }) => {
                                 <ellipse cx="6.62058" cy="6.59934" rx="6.62058" ry="6.59934" transform="matrix(1 0 0 -1 0.722656 13.9414)" fill={`${selectedIndex == index ? "white" : "#5A5A5A"}`}/>
                             </svg>
                         </div>
-                        <p className={`${selectedIndex == index ? "opacity-100" : "opacity-50"} text-white whitespace-pre text-[41.387px] font-normal font-snu-regular text-center mt-[19.8px] transition-opacity duration-500 ease-in-out`}>{heading}</p>
+                        <p className={`${selectedIndex == index ? "opacity-100" : "opacity-50"} text-white whitespace-pre text-[40px] leading-[40px] font-normal font-snu-regular text-center mt-[19.8px] transition-opacity duration-500 ease-in-out`}>{heading}<br/>{router.pathname === '/program' && <span className=" text-white text-center font-snu-regular text-[40px] leading-[40px]">{index === 0 && "11.30"}{index === 1 && "11.30 - 12.06"}{index === 2 && "12.01"}{index === 3 && "12.02 - 12.03"}</span>}</p>
                     </div>
                 ))}
             </div>
@@ -129,7 +129,7 @@ export const ContentsSelection = ({ headingList, contentsByHeading }) => {
                                 <ellipse cx="8.07742" cy="8" rx="8.07742" ry="8" transform="matrix(1 0 0 -1 0 16)" fill="white"/>
                                 </svg>
                                 {router.pathname === "/program" &&
-                                    <p className={`${selectedIndex == 1 ? "opacity-100" : "opacity-50"} absolute mt-[30px] text-white text-[14px] leading-[28px] whitespace-pre font-medium text-center transition-opacity duration-500 ease-in-out lg:hidden`}>11.30 - 12.05<br/>Workshop</p>
+                                    <p className={`${selectedIndex == 1 ? "opacity-100" : "opacity-50"} absolute mt-[30px] text-white text-[14px] leading-[28px] whitespace-pre font-medium text-center transition-opacity duration-500 ease-in-out lg:hidden`}>11.30 - 12.06<br/>Workshop</p>
                                 }
                             </div>
                         }
@@ -149,14 +149,14 @@ export const ContentsSelection = ({ headingList, contentsByHeading }) => {
                                 <ellipse cx="8.07742" cy="8" rx="8.07742" ry="8" transform="matrix(1 0 0 -1 0 16)" fill="white"/>
                                 </svg>
                                 {router.pathname === "/program" &&
-                                    <p className={`${selectedIndex == 3 ? "opacity-100" : "opacity-50"} absolute mt-[30px] text-white text-[14px] leading-[28px] whitespace-pre font-medium text-center transition-opacity duration-500 ease-in-out lg:hidden`}>12.02, 12.03<br/>Talk Concert</p>
+                                    <p className={`${selectedIndex == 3 ? "opacity-100" : "opacity-50"} absolute mt-[30px] text-white text-[14px] leading-[28px] whitespace-pre font-medium text-center transition-opacity duration-500 ease-in-out lg:hidden`}>12.02 - 12.03<br/>Talk Concert</p>
                                 }
                             </div>
                         }
                     </div>
                 ))}
                 <p className={`${selectedIndex == 0 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out sm:text-[60px] sm:leading-0 ${router.pathname === '/program' ? "sm:mt-[120px]" : "sm:mt-[66px]"}`}>{headingList[0]}<br/>{router.pathname === '/program' && <span className="lg:hidden text-white text-center font-snu-regular text-[34px] leading-0">11.30.THU</span>}</p>
-                <p className={`${selectedIndex == 1 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out sm:text-[60px] sm:leading-0 ${router.pathname === '/program' ? "sm:mt-[120px]" : "sm:mt-[66px]"}`}>{headingList[1]}<br/>{router.pathname === '/program' && <span className="lg:hidden text-white text-center font-snu-regular text-[34px] leading-0">11.30.THU ~ 12.05.TUE</span>}</p>
+                <p className={`${selectedIndex == 1 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out sm:text-[60px] sm:leading-0 ${router.pathname === '/program' ? "sm:mt-[120px]" : "sm:mt-[66px]"}`}>{headingList[1]}<br/>{router.pathname === '/program' && <span className="lg:hidden text-white text-center font-snu-regular text-[34px] leading-0">11.30.THU ~ 12.06.WED</span>}</p>
                 <p className={`${selectedIndex == 2 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out sm:text-[60px] sm:leading-0 ${router.pathname === '/program' ? "sm:mt-[120px]" : "sm:mt-[66px]"}`}>{headingList[2]}<br/>{router.pathname === '/program' && <span className="lg:hidden text-white text-center font-snu-regular text-[34px] leading-0">12.01.FRI</span>}</p>
                 <p className={`${selectedIndex == 3 ? "opacity-100" : "opacity-0"} absolute mt-[40px] text-white w-[100%] text-[50px] leading-[50px] whitespace-pre-line font-normal font-snu-regular text-center transition-opacity duration-500 ease-in-out sm:text-[60px] sm:leading-0 ${router.pathname === '/program' ? "sm:mt-[120px]" : "sm:mt-[66px]"}`}>{headingList[3]}<br/>{router.pathname === '/program' && <span className="lg:hidden text-white text-center font-snu-regular text-[34px] leading-0">12.02.SAT  ,  12.03.SUN</span>}</p>
             </div>
