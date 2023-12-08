@@ -60,7 +60,7 @@ const PartnersData = [
 export const PartnersContainer: React.FC = () => {
     return (
         <div className="w-screen h-fit bg-black p-6 gap-8 flex flex-col justify-start items-center">
-            <p className="text-[80px] font-snu-regular hidden lg:block">
+            <p className="text-[128px] font-snu-regular hidden lg:block leading-[165px]">
                 Partners
             </p>
             <p className="whitespace-break-spaces text-sm leading-7 text-center mb-8">

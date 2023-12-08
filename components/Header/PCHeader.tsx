@@ -59,7 +59,7 @@ export const PCHeader = () => {
                     if (ref) lottieRef.current = ref;
                   }}
                   src={lottieJson}
-                  style={{ width: 70, height: 40 }}
+                  style={{ width: "auto", height: 40 }}
                 />
             </button>
         )
@@ -67,24 +67,25 @@ export const PCHeader = () => {
 
     return (
         <div className={`top-0 p-10 w-full sm:hidden flex flex-row justify-between z-10 bg-gradient-to-b from-[#000000] to-[#00000000] 
-            ${router.pathname !== "/" && "items-center"}
             ${router.pathname.includes("works/") ? "fixed": "sticky"}
           `}
         >
             <Link href="/">
+              <div className="flex flex-col gap-4 overflow-x-visible">
               {router.pathname !== "/" ? (
                 <Image className="cursor-pointer" src="/header-logo.png" width={200} height={50} alt="logo" />
               ) : (
-                <div className="flex flex-col gap-4 overflow-x-visible">
+                <>
                   <p className="cursor-pointer text-[80px] font-snu-regular leading-[60px]">SNU DESIGN WEEK 2023</p>
                   <div className="flex flex-row gap-4">
                     <p className="cursor-pointer text-[80px] font-snu-regular leading-[60px] shrink-0">THE GREAT BUMP</p>
                     <p className="cursor-pointer text-md shrink-0 whitespace-break-spaces leading-6">{"2023.11.30.THU - 12.05.TUE 10AM - 6PM\n1, GWANAK-RO, GWANAK-GU, SEOUL\n49, COLLEGE OF FINE ARTS, SEOUL NAT’L UNIVERSITY"}</p>
                   </div>
-                </div>
+                </>
               )}
+              </div>
             </Link>
-            <div className="flex flex-row gap-[5vw] h-fit">
+            <div className="flex flex-row gap-[5vw] justify-end h-fit w-fit shrink-0">
                 <HeaderNavButton pageName="Home" />
                 <HeaderNavButton pageName="About" />
                 <HeaderNavButton pageName="Works" />
