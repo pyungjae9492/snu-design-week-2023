@@ -18,7 +18,7 @@ const talkConcertSchedule2_second_mobile = "2부 | 16:10 ~ 17:00\n강수영 / �
 export const TalkConcert = () => {
     return (
         <div className="flex flex-col">
-            <img src="/program_img.png" className="w-full h-[543.337px] flex-shrink-0 bg-[#FFFFFF] mt-[80.29px] mb-[56.66px] self-center sm:h-[199px]" />
+            <img src="/talk_concert.png" className="w-full h-[543.337px] flex-shrink-0 bg-[#FFFFFF] mt-[80.29px] mb-[56.66px] self-center sm:h-[199px]" />
             <p className="text-[#FFFFFF] text-[30px] leading-[40px] tracking-[-1.5px] mb-[24px] sm:text-[24px] sm:font-semibold sm:leading-[32px] sm:tracking-normal">토크콘서트<br/><span className="sm:font-medium sm:leading-[30px]">Talk Concert</span></p>
 
             <div className="flex flex-row gap-[84px] sm:flex-col sm:gap-0">
