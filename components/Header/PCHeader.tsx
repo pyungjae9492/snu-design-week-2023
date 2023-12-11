@@ -66,14 +66,14 @@ export const PCHeader = () => {
     }
 
     return (
-        <div className={`top-0 p-10 w-full sm:hidden flex flex-row justify-between z-10 bg-gradient-to-b from-[#000000] to-[#00000000] 
+        <div className={`top-0 p-10 sm:hidden flex flex-row justify-between z-10 bg-gradient-to-b from-[#000000] to-[#00000000]
             ${router.pathname.includes("works/") ? "fixed": "sticky"}
           `}
         >
             <Link href="/">
               <div className="flex flex-col gap-4 overflow-x-visible">
               {router.pathname !== "/" ? (
-                <Image className="cursor-pointer" src="/header-logo.png" width={200} height={50} alt="logo" />
+                <Image className="cursor-pointer" src="/header-logo.png" width={300} height={50} alt="logo" />
               ) : (
                 <>
                   <p className="cursor-pointer text-[80px] font-snu-regular leading-[60px]">SNU DESIGN WEEK 2023</p>
@@ -85,7 +85,7 @@ export const PCHeader = () => {
               )}
               </div>
             </Link>
-            <div className="flex flex-row gap-[5vw] justify-end h-fit w-fit shrink-0">
+            <div className="flex flex-row justify-between h-fit w-[calc(100%-550px)] shrink-0">
                 <HeaderNavButton pageName="Home" />
                 <HeaderNavButton pageName="About" />
                 <HeaderNavButton pageName="Works" />

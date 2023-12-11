@@ -10,7 +10,7 @@
     padding: 0px;
 }
 
-.notion-page-content {
+/* .notion-page-content {
     width: 90vw;
     max-width: 90vw;
     padding-top: 24px;
@@ -24,7 +24,7 @@
         padding-top: 100px;
         gap: 64px;
     }
-}
+} */
 
 .notion-page-cover-wrapper,
 .notion-page-cover-wrapper img,
