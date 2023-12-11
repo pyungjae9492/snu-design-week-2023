@@ -60,12 +60,7 @@ async function getAllPagesImpl(
           existingPageId: map[canonicalPageId]
         })
 
-        return {
-          ...map,
-          // @ts-ignore
-          [canonicalPageId+pageId]: pageId
-        }
-        
+        return map
       } else {
         return {
           ...map,
