@@ -69,7 +69,9 @@ export const StudentInfo = (props) => {
       >
         {otherWorkLink && (
           <>
-            <p className='text-[#6F6F6F] text-base lg:hidden'>OTHER WORK</p>
+            <p className='text-[#6F6F6F] text-base lg:hidden z-50 relative'>
+              OTHER WORK
+            </p>
             <Image
               src={otherData?.image}
               layout='responsive'
@@ -94,7 +96,6 @@ export const StudentInfo = (props) => {
           }}
         />
       </div>
-      
     </div>
   )
 }
