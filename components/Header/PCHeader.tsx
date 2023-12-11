@@ -66,7 +66,7 @@ export const PCHeader = () => {
     }
 
     return (
-        <div className={`top-0 p-10 sm:hidden flex flex-row justify-between z-10 bg-gradient-to-b from-[#000000] to-[#00000000]
+        <div className={`top-0 p-10 sm:hidden flex flex-row justify-between z-10 bg-gradient-to-b from-[#000000] to-[#00000000] w-full
             ${router.pathname.includes("works/") ? "fixed": "sticky"}
           `}
         >

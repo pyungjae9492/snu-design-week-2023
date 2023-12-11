@@ -10,7 +10,7 @@ export const WorksContainer = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
   const [selectedMenu, setSelectedMenu] = useState('ALL')
 
-  const notionProps = props[selectedMenu]
+  const notionProps = props["ALL"]
 
   return (
     <div className={`w-full sm:max-w-[640px] mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row px-7 lg:px-10 sm:pb-20 overflow-y-hidden ${isMenuOpen && "sm:h-[calc(100vh-88px)]"}`}>
