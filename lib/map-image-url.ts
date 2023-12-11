@@ -58,7 +58,6 @@ export const mapImageUrl = (
   notionImageUrlV2.searchParams.set('cache', 'v2')
 
   url = notionImageUrlV2.toString()
-  
 
   return url
 }
