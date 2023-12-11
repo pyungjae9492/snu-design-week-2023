@@ -12,6 +12,7 @@ import { mapImageUrl } from './map-image-url'
 export async function getPreviewImageMap(
   recordMap: ExtendedRecordMap
 ): Promise<PreviewImageMap> {
+  // @ts-ignore
   const urls: string[] = getPageImageUrls(recordMap, {
     mapImageUrl
   })
@@ -46,6 +47,7 @@ async function createPreviewImage(
       }
     } catch (err) {
       // ignore redis errors
+      // @ts-ignore
       console.warn(`redis error get "${cacheKey}"`, err.message)
     }
 
@@ -63,11 +65,13 @@ async function createPreviewImage(
       await db.set(cacheKey, previewImage)
     } catch (err) {
       // ignore redis errors
+      // @ts-ignore
       console.warn(`redis error set "${cacheKey}"`, err.message)
     }
 
     return previewImage
   } catch (err) {
+    // @ts-ignore
     console.warn('failed to create preview image', url, err.message)
     return null
   }
