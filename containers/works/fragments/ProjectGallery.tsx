@@ -112,6 +112,8 @@ export const ProjectGallery: React.FC<types.PageProps> = ({
   const keys = Object.keys(recordMap?.block || {})
   const block = recordMap?.block?.[keys[0]]?.value
 
+  console.log(recordMap)
+
   // const isRootPage =
   //   parsePageId(block?.id) === parsePageId(site?.rootNotionPageId)
   const isBlogPost =

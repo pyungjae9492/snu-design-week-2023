@@ -1,5 +1,6 @@
+import { Player } from "@lottiefiles/react-lottie-player"
 import Image from "next/image"
-import { useMemo } from "react"
+import { useMemo, useRef } from "react"
 
 export const MotionGraphicSection = () => {
 
@@ -8,6 +9,8 @@ export const MotionGraphicSection = () => {
             return window.innerWidth <= 1000
         }
     }, [])
+
+    const lottieRef = useRef(null)
 
     return (
         <div
@@ -19,9 +22,15 @@ export const MotionGraphicSection = () => {
                     layout="fill" 
                 />
             ) : (
-                <Image
-                    src="/pc-main-motion-img.png"
-                    layout="fill" 
+                <Player
+                    autoplay={true}
+                    loop={true}
+                    controls={false}
+                    lottieRef={(ref) => {
+                        if (ref) lottieRef.current = ref;
+                    }}
+                    src="/main-motion-poster.json"
+                    style={{ width: "100%", height: "100%" }}
                 />
             )}
         </div>
