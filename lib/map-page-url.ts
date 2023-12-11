@@ -14,11 +14,13 @@ export const mapPageUrl =
   (pageId = '') => {
     const pageUuid = parsePageId(pageId, { uuid: true })
 
+    console.log('mapPageUrl', { pageId, pageUuid })
+
     if (uuidToId(pageUuid) === site.rootNotionPageId) {
       return createUrl('/', searchParams)
     } else {
       return createUrl(
-        `/works/${getCanonicalPageId(pageUuid, recordMap, { uuid })}`,
+        `/works/${getCanonicalPageId(pageUuid, recordMap)}`,
         searchParams
       )
     }
@@ -32,9 +34,7 @@ export const getCanonicalPageUrl =
     if (uuidToId(pageId) === site.rootNotionPageId) {
       return `https://${site.domain}`
     } else {
-      return `https://${site.domain}/works/${getCanonicalPageId(pageUuid, recordMap, {
-        uuid
-      })}`
+      return `https://${site.domain}/works/${getCanonicalPageId(pageUuid, recordMap)}`
     }
   }
 

@@ -1,36 +1,49 @@
-import { Block } from 'notion-types'
+import { Block } from "notion-types";
+import { defaultMapImageUrl } from "react-notion-x";
+import * as types from 'notion-types'
 
-export const mapImageUrl = (
-  url: string,
-  block: Block
-): string | null => {
+import { defaultPageCover, defaultPageIcon } from "./config";
+
+type MapImageUrlFn = (url: string, block: types.Block) => string
+
+export const mapImageUrl: MapImageUrlFn = (url: string, block: Block) => {
+  if (url === defaultPageCover || url === defaultPageIcon) {
+    return url || "";
+  }
+  if (url) {
+    return customMapImageUrl(url, block) || "";
+  }
+  return defaultMapImageUrl(url, block) || "";
+};
+
+export const customMapImageUrl = (url: string, block: Block): string => {
   if (!url) {
-    return null
+    throw new Error("URL can't be empty");
   }
 
-  if (url.startsWith('data:')) {
-    return url
+  if (url.startsWith("data:")) {
+    return url;
   }
 
   // more recent versions of notion don't proxy unsplash images
-  if (url.startsWith('https://images.unsplash.com')) {
-    return url
+  if (url.startsWith("https://images.unsplash.com")) {
+    return url;
   }
 
   try {
-    const u = new URL(url)
+    const u = new URL(url);
 
     if (
-      u.pathname.startsWith('/secure.notion-static.com') &&
-      u.hostname.endsWith('.amazonaws.com')
+      u.pathname.startsWith("/secure.notion-static.com") &&
+      u.hostname.endsWith(".amazonaws.com")
     ) {
       if (
-        u.searchParams.has('X-Amz-Credential') &&
-        u.searchParams.has('X-Amz-Signature') &&
-        u.searchParams.has('X-Amz-Algorithm')
+        u.searchParams.has("X-Amz-Credential") &&
+        u.searchParams.has("X-Amz-Signature") &&
+        u.searchParams.has("X-Amz-Algorithm")
       ) {
         // if the URL is already signed, then use it as-is
-        return url
+        return url;
       }
     }
     if (u.hostname.endsWith("file.notion.so")) {
@@ -40,25 +53,24 @@ export const mapImageUrl = (
     // ignore invalid urls
   }
 
-  if (url.startsWith('/images')) {
-    url = `https://www.notion.so${url}`
+  if (url.startsWith("/images")) {
+    url = `https://www.notion.so${url}`;
   }
 
   url = `https://www.notion.so${
-    url.startsWith('/image') ? url : `/image/${encodeURIComponent(url)}`
-  }`
+    url.startsWith("/image") ? url : `/image/${encodeURIComponent(url)}`
+  }`;
 
-  const notionImageUrlV2 = new URL(url)
-  let table = block.parent_table === 'space' ? 'block' : block.parent_table
-  if (table === 'collection' || table === 'team') {
-    table = 'block'
+  const notionImageUrlV2 = new URL(url);
+  let table = block.parent_table === "space" ? "block" : block.parent_table;
+  if (table === "collection" || table === "team") {
+    table = "block";
   }
-  notionImageUrlV2.searchParams.set('table', table)
-  notionImageUrlV2.searchParams.set('id', block.id)
-  notionImageUrlV2.searchParams.set('cache', 'v2')
+  notionImageUrlV2.searchParams.set("table", table);
+  notionImageUrlV2.searchParams.set("id", block.id);
+  notionImageUrlV2.searchParams.set("cache", "v2");
 
-  url = notionImageUrlV2.toString()
-  
+  url = notionImageUrlV2.toString();
 
-  return url
-}
+  return url;
+};
