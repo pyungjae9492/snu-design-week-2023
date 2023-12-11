@@ -53,7 +53,6 @@ async function createPreviewImage(
 
     const { body } = await got(url, { responseType: 'buffer' })
     const result = await lqip(body)
-    console.log('lqip', { ...result.metadata, url, cacheKey })
 
     const previewImage = {
       originalWidth: result.metadata.originalWidth,
