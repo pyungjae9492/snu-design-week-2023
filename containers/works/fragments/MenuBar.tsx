@@ -6,20 +6,34 @@ import styles from './menubar.module.css'
   /*props: isMenuOpen, setIsMenuOpen, focusedMenu, setSelectedMenu*/
 }
 export default function MenuBar(props) {
-
   const { isMenuOpen, setIsMenuOpen, selectedMenu, setSelectedMenu } = props
 
   const [focusedMenu, setFocusedMenu] = useState(props.selectedMenu)
   const [onlyShown, setOnlyShown] = useState('')
-  
-  const CircleMenu = (props: { menu: string, isFocused: boolean }) => (
-    <div 
-      className={`flex flex-row w-fit h-[90px] items-center gap-10 transition-opacity ${!props.isFocused && "opacity-30"}`}
+
+  const CircleMenu = (props: { menu: string; isFocused: boolean }) => (
+    <div
+      className={`flex flex-row w-fit h-[90px] items-center gap-10 transition-opacity ${
+        !props.isFocused && 'opacity-30'
+      }`}
       onPointerEnter={() => setFocusedMenu(props.menu)}
       onPointerLeave={() => setFocusedMenu(selectedMenu)}
     >
-      <svg className='shrink-0' xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 15 15" fill="none">
-        <circle cx="7.4084" cy="7.35111" r="6.92308" transform="rotate(50 7.4084 7.35111)" fill="white"/>
+      <svg
+        className='shrink-0'
+        xmlns='http://www.w3.org/2000/svg'
+        width='17'
+        height='17'
+        viewBox='0 0 15 15'
+        fill='none'
+      >
+        <circle
+          cx='7.4084'
+          cy='7.35111'
+          r='6.92308'
+          transform='rotate(50 7.4084 7.35111)'
+          fill='white'
+        />
       </svg>
       <div
         onClick={() => onSelectMenu(props.menu)}
@@ -32,8 +46,20 @@ export default function MenuBar(props) {
 
   const AfterOpenMenu = (props: { menu: string }) => (
     <div className={`flex flex-row w-[550px] h-[90px] items-center gap-10`}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 15 15" fill="none">
-        <circle cx="7.4084" cy="7.35111" r="6.92308" transform="rotate(50 7.4084 7.35111)" fill="white"/>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='17'
+        height='17'
+        viewBox='0 0 15 15'
+        fill='none'
+      >
+        <circle
+          cx='7.4084'
+          cy='7.35111'
+          r='6.92308'
+          transform='rotate(50 7.4084 7.35111)'
+          fill='white'
+        />
       </svg>
       <div
         onClick={() => reselectMenu(props.menu)}
@@ -53,7 +79,6 @@ export default function MenuBar(props) {
     }
     setIsMenuOpen(!isMenuOpen)
     setSelectedMenu(menu)
-
   }
 
   const reselectMenu = (menu: string) => {
@@ -66,62 +91,70 @@ export default function MenuBar(props) {
     setOnlyShown(selectedMenu)
   }, [selectedMenu])
 
+  const isAllShown = onlyShown === 'ALL'
+
   return (
     <>
       {isMenuOpen ? (
         <div className='absolute top-0 -left-[500px] z-50'>
-          <div 
-            className={onlyShown === 'ALL' ? styles.ALLS : styles.ALL}
-          >
-            <CircleMenu menu='ALL' isFocused={focusedMenu === 'ALL'}/>
+          <div className={isAllShown ? styles.ALLS : styles.ALL}>
+            <CircleMenu menu='ALL' isFocused={focusedMenu === 'ALL'} />
           </div>
           <div
-            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : onlyShown === 'ALL' ? styles.BRANDSTILL : styles.BRAND}
+            className={onlyShown === 'BRAND' ? styles.BRANDSHOWN : styles.BRAND}
           >
-            <CircleMenu menu='BRAND' isFocused={focusedMenu === 'BRAND'}/>
+            <CircleMenu menu='BRAND' isFocused={focusedMenu === 'BRAND'} />
           </div>
           <div
-            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : onlyShown === 'ALL' ? styles.UXUISTILL : styles.UXUI}
+            className={onlyShown === 'UX/UI' ? styles.UXUISHOWN : styles.UXUI}
           >
-            <CircleMenu menu='UX/UI' isFocused={focusedMenu === 'UX/UI'}/>
+            <CircleMenu menu='UX/UI' isFocused={focusedMenu === 'UX/UI'} />
           </div>
           <div
-            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : onlyShown === 'ALL' ? styles.MEDIASTILL : styles.MEDIA}
+            className={onlyShown === 'MEDIA' ? styles.MEDIASHOWN : styles.MEDIA}
           >
-            <CircleMenu menu='MEDIA' isFocused={focusedMenu === 'MEDIA'}/>
+            <CircleMenu menu='MEDIA' isFocused={focusedMenu === 'MEDIA'} />
           </div>
           <div
-            className={onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : onlyShown === 'ALL' ? styles.GRAPHICSTILL : styles.GRAPHIC}
+            className={
+              onlyShown === 'GRAPHIC' ? styles.GRAPHICSHOWN : styles.GRAPHIC
+            }
           >
-            <CircleMenu menu='GRAPHIC' isFocused={focusedMenu === 'GRAPHIC'}/>
+            <CircleMenu menu='GRAPHIC' isFocused={focusedMenu === 'GRAPHIC'} />
           </div>
           <div
             className={
               onlyShown === 'PRODUCT INTERACTION'
                 ? styles.PRODUCTSHOWN
-                : onlyShown === 'ALL' ? styles.PRODUCTSTILL : styles.PRODUCT
+                : styles.PRODUCT
             }
           >
-            <CircleMenu menu='PRODUCT INTERACTION' isFocused={focusedMenu === 'PRODUCT INTERACTION'}/>
+            <CircleMenu
+              menu='PRODUCT INTERACTION'
+              isFocused={focusedMenu === 'PRODUCT INTERACTION'}
+            />
           </div>
           <div
             className={
-              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : onlyShown === 'ALL' ? styles.LIVINGSTILL : styles.LIVING
+              onlyShown === 'LIVING' ? styles.LIVINGSHOWN : styles.LIVING
             }
           >
-            <CircleMenu menu='LIVING' isFocused={focusedMenu === 'LIVING'}/>
+            <CircleMenu menu='LIVING' isFocused={focusedMenu === 'LIVING'} />
           </div>
           <div
             className={
-              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : onlyShown === 'ALL' ? styles.MOBILITY : styles.MOBILITY
+              onlyShown === 'MOBILITY' ? styles.MOBILITYSHOWN : styles.MOBILITY
             }
           >
-            <CircleMenu menu='MOBILITY' isFocused={focusedMenu === 'MOBILITY'}/>
+            <CircleMenu
+              menu='MOBILITY'
+              isFocused={focusedMenu === 'MOBILITY'}
+            />
           </div>
           <div
-            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : onlyShown === 'ALL' ? styles.SPACESTILL : styles.SPACE}
+            className={onlyShown === 'SPACE' ? styles.SPACESHOWN : styles.SPACE}
           >
-            <CircleMenu menu='SPACE' isFocused={focusedMenu === 'SPACE'}/>
+            <CircleMenu menu='SPACE' isFocused={focusedMenu === 'SPACE'} />
           </div>
         </div>
       ) : (
