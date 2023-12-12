@@ -20,6 +20,8 @@ export function getCanonicalPageId(
   if (override) {
     return override
   } else {
-    return getCanonicalPageIdImpl(pageId, recordMap)
+    return getCanonicalPageIdImpl(pageId, recordMap, {
+      uuid
+    })
   }
 }
