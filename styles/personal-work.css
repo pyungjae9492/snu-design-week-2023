@@ -60,7 +60,14 @@
 }
 
 .notion-gallery-view {
-    height: 500px;
+    height: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (max-width: 1001px) {
+        height: auto;
+    }
 }
 
 .notion-collection-row-property {
@@ -78,4 +85,16 @@
     .notion-blank {
         display: none;
     }
+}
+
+.notion-h-title {
+    color: #FFF!important;
+}
+
+.notion-collection-row {
+    display: none;
+}
+
+.notion-toggle {
+    display: none;
 }

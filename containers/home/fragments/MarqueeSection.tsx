@@ -4,12 +4,11 @@ import Image from "next/image"
 
 export const MarqueeSection = () => {
     return (
-        <div className="fixed bottom-0 w-full hidden lg:flex">
+        <div className="fixed bottom-0 w-full h-[72px] hidden lg:flex">
             <Marquee>
                 <Image
                     src="/marquee.png"
-                    width={1600}
-                    height={72}
+                    layout="fill"
                 />
             </Marquee>        
         </div>

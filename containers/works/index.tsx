@@ -44,7 +44,7 @@ export const WorksContainer = (props) => {
         </div>
       </div>
 
-      <div className='lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'>
+      <div className='max-w-[90vw] lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'>
         <ProjectGallery {...notionProps} />
       </div>
     </div>

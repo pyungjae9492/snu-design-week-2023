@@ -69,5 +69,6 @@ export interface NotionPageInfo {
   author: string
   authorImage: string
   detail: string
+  slug: string
 }
 
