@@ -4,6 +4,10 @@
     display: none;
 }
 
+.notion-app {
+    background-color: #000;
+}
+
 .notion-page {
     width: 100vw;
     background-color: #000;
@@ -35,7 +39,7 @@
 .notion-text {
     color: #FFF;
     font-family: Pretendard;
-    font-size: 14px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 28px;
@@ -62,12 +66,26 @@
 .notion-gallery-view {
     height: auto;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     @media (max-width: 1001px) {
         height: auto;
     }
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+@media (max-width: 1000px) {
+    .slide {
+        height: auto;
+        max-height: 200px;
+    }   
 }
 
 .notion-collection-row-property {
@@ -88,6 +106,7 @@
 }
 
 .notion-h-title {
+    font-family: Pretendard;
     color: #FFF!important;
 }
 

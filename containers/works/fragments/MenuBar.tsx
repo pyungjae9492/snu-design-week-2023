@@ -11,6 +11,10 @@ export default function MenuBar(props) {
   const [focusedMenu, setFocusedMenu] = useState(props.selectedMenu)
   const [onlyShown, setOnlyShown] = useState('')
 
+  useEffect(() => {
+    setIsMenuOpen(true)
+  }, [])
+
   const CircleMenu = (props: { menu: string; isFocused: boolean }) => (
     <div
       className={`flex flex-row w-fit h-[90px] items-center gap-10 transition-opacity ${
