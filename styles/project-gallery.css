@@ -137,6 +137,7 @@
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-gap: 20px;
     gap: 20px;
+    border: none;
     @media screen and (max-width: 1000px) {
         grid-template-columns: repeat(1, minmax(300px, 1fr));   
     }

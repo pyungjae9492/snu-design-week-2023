@@ -29,10 +29,10 @@ export const StudentInfo = (props) => {
     const data = res.data
     console.log(data)
 
-    const { image, pageId } = data
+    const { image, pageId, slug } = data
     const uuid = idToUuid(pageId)
 
-    setOtherData({ image, uuid })
+    setOtherData({ image, uuid, slug })
   }
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export const StudentInfo = (props) => {
         className='lg:w-[300px] lg:h-[180px] flex-col gap-2 relative cursor-pointer'
         onClick={() => {
           if (otherWorkLink) {
-            router.push(`/works/${otherData?.uuid}`)
+            router.push(`/works/${otherData?.slug}`)
           }
         }}
       >

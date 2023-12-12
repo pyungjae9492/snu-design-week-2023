@@ -88,6 +88,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   //   recordMap
   // )
   const publishedTime = getPageProperty<number>('Published', block, recordMap)
+  const slug = getPageProperty<string>('slug', block, recordMap)
   const datePublished = publishedTime ? new Date(publishedTime) : undefined
   // const dateUpdated = lastUpdatedTime
   //   ? new Date(lastUpdatedTime)
@@ -109,7 +110,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     imageObjectPosition,
     author,
     authorImage,
-    detail
+    detail,
+    slug
   }
 
   res.setHeader(

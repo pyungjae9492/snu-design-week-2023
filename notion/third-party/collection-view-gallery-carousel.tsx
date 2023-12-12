@@ -112,7 +112,7 @@ function Gallery({ blockIds, collectionView, collection }: GalleryProps) {
 
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
-  const arrowSize = "2rem";
+  const arrowSize = "2.5rem";
 
   interface ArrowProps {
     type: "PREV" | "NEXT";
@@ -121,9 +121,9 @@ function Gallery({ blockIds, collectionView, collection }: GalleryProps) {
   function Arrow({ type }: ArrowProps) {
     const pointer =
       type === "PREV" ? (
-        <HiOutlineChevronLeft size={arrowSize} color={"#6495ED "} />
+        <HiOutlineChevronLeft size={arrowSize} color={"#FFFFFF "} />
       ) : (
-        <HiOutlineChevronRight size={arrowSize} color={"#6495ED "} />
+        <HiOutlineChevronRight size={arrowSize} color={"#FFFFFF "} />
       );
 
     const isFirst = selectedItemIndex === 0;
@@ -150,7 +150,7 @@ function Gallery({ blockIds, collectionView, collection }: GalleryProps) {
     return (
       <div
         className={
-          `flex flex-col justify-center cursor-pointer w-10 h-full z-10`
+          `flex flex-col justify-center cursor-pointer w-12 h- h-full z-10`
         }
         onClick={onClick}
       >
@@ -162,7 +162,7 @@ function Gallery({ blockIds, collectionView, collection }: GalleryProps) {
   return (
     <div className="notion-gallery flex flex-row w-full text-primary relative items-center notion-margin-hard">
       <Arrow type="PREV" />
-      <div className="notion-gallery-view h-[500px] overflow-hidden">
+      <div className="notion-gallery-view overflow-hidden">
         <Carousel
           showThumbs={false}
           showStatus={false}
