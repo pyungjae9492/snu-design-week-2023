@@ -172,7 +172,18 @@ export default function NotionDomainDynamicPage(props) {
             height: '100%'
           }}
         />
-        <div className='absolute lg:w-[35%] left-6 bottom-6 lg:left-[110px] lg:bottom-[100px]'>
+        <div 
+          className='absolute top-32 left-10 cursor-pointer hidden lg:block'
+          onClick={() => router.push('/works')}
+        >
+          <Image 
+            src="/back.png"
+            alt="back"
+            width={73}
+            height={45}
+          />
+        </div>
+        <div className='absolute w-[85%] lg:w-[50%] left-6 bottom-6 lg:left-[5vw] lg:bottom-[7vw]'>
           <WorkExplanation {...pageProperties} />
         </div>
       </div>

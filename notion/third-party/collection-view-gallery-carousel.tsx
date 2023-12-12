@@ -112,7 +112,7 @@ function Gallery({ blockIds, collectionView, collection }: GalleryProps) {
 
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
-  const arrowSize = "2.5rem";
+  const arrowSize = "2rem";
 
   interface ArrowProps {
     type: "PREV" | "NEXT";
@@ -171,9 +171,17 @@ function Gallery({ blockIds, collectionView, collection }: GalleryProps) {
           selectedItem={selectedItemIndex}
         >
           {coverContentsArray.map((coverContent, index) => (
-            <div className="w-full h-[200px]">
+            <div 
+              style={{
+                height: "100%",
+              }}
+            >
               <img
                 className="object-contain w-full"
+                style={{
+                  height: "100%",
+                  objectFit: "contain",
+                }}
                 src={coverContent.src}
                 alt={coverContent.caption || "notion-image"}
               />

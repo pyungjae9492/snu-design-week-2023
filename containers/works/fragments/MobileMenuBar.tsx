@@ -38,7 +38,7 @@ export const MobileMenuBar = (props) => {
                     </defs>
                 </svg>
             </div>
-            <div className={`absolute left-0 w-full h-[calc(100vh-198px)] z-40 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm flex flex-col justify-start items-center mx-auto opacity-0 pointer-events-none transition-all ${props.isMenuOpen && "opacity-100 pointer-events-auto"}`}>
+            <div className={`absolute left-0 w-full h-[calc(100vh-198px)] z-30 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm flex flex-col justify-start items-center mx-auto opacity-0 pointer-events-none transition-all ${props.isMenuOpen && "opacity-100 pointer-events-auto"}`}>
                 <div className="flex flex-col pt-6 gap-[30px] items-center">
                     <ToggleMenu menu='ALL' />
                     <ToggleMenu menu='BRAND' />

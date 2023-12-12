@@ -52,15 +52,17 @@ export const MobileHeader = () => {
     return (
         <>
             <div 
-                className={`${router.pathname.includes("works/") ? "fixed" : "sticky"} top-0 sm:p-6 p-10 w-full sm:flex hidden flex-row justify-between items-center z-50`}
-                style={{
-                    background: router.pathname.includes("works/") ? 
-                        "linear-gradient(180deg, rgba(0, 0, 0, 0.80) 85%, rgba(58, 58, 58, 0.00) 100%)" :
-                        "black"
-                }}
+                className={`${router.pathname.includes("works/") ? "fixed" : "sticky"} top-0 sm:p-6 ${router.pathname === "/" && "sm:pb-0"} p-10 w-full sm:flex hidden flex-row justify-between items-center z-50`}
             >
-                <p className={`text-white text-2xl font-bold font-snu-regular break-all w-14 leading-5 ${isHome && "invisible"}`}>{"The Great\nBump"}</p>
-                <p className={`text-white text-3xl font-bold font-snu-regular break-all leading-5 ${isHome && "invisible"}`}>{pageName}</p>
+                <div 
+                    className="fixed w-full h-[180px] -z-10 top-0 left-0"
+                    style={{
+                        background: "linear-gradient(180deg, rgba(0, 0, 0, 0.76) 41.18%, rgba(58, 58, 58, 0.00) 95.27%)",
+                        pointerEvents: "none"
+                    }}
+                />
+                <p className={`text-white text-2xl font-snu-regular break-all whitespace-break-spaces leading-5 shrink-0 ${isHome && "invisible"}`}>{"The Great\nBump"}</p>
+                <p className={`text-white text-3xl font-snu-regular break-all leading-5 ${isHome && "invisible"}`}>{pageName}</p>
                 <button 
                     className="text-white flex w-14 justify-end items-center"
                     onClick={onClickMenuButton}
