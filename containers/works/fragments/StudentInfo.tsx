@@ -36,7 +36,9 @@ export const StudentInfo = (props) => {
   }
 
   useEffect(() => {
-    getInfoFromUrl(otherWorkLink)
+    if (otherWorkLink) {
+      getInfoFromUrl(otherWorkLink)
+    }
   }, [otherWorkLink])
 
   const router = useRouter()
