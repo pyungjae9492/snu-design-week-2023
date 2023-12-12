@@ -122,6 +122,7 @@
 
 .notion-collection-card-property:nth-child(2) {
     order: 3;
+    opacity: 0;
 }
 
 .notion-collection-card-property:nth-child(3) {

@@ -148,8 +148,8 @@ export default function NotionDomainDynamicPage(props) {
   )
 
   const slug = router.query.pageId as string
-  const course = slug.split('-')[0]
-  const pageLength = slug.split('-')[1]
+  const course = slug.split('-').length < 3 ? slug.split('-')[0] : slug.split('-')[0] + '-' + slug.split('-')[1]
+  const pageLength = slug.split('-').length < 3 ? slug.split('-')[1] : slug.split('-')[2]
 
   const prevPage = Number(pageLength) > 1 ? `${course}-${Number(pageLength) - 1}` : null
   const nextPage = Number(pageLength) < pageLengths[course] ? `${course}-${Number(pageLength) + 1}` : null
