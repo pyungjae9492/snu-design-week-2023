@@ -38,7 +38,7 @@ async function getAllPagesImpl(
     rootNotionPageId,
     rootNotionSpaceId,
     getPage, {
-      traverseCollections: false
+      traverseCollections: false,
     }
   )
 
