@@ -67,9 +67,12 @@ export async function getStaticPaths() {
 
   const courses = ['brand', 'uiux', 'graphic', 'media', 'product-interaction', 'living', 'mobility', 'space']
 
+  // course-pageLength format regex (ex. brand-anyNumber)
+  const coursePageLengthRegex = new RegExp(`(${courses.join('|')})-(\\d+)`)
+
   const staticPaths = {
     paths: Object.keys(siteMap.canonicalPageMap)
-      .filter((pageId) => courses.includes(pageId.split('-')[0]))
+      .filter((pageId) => coursePageLengthRegex.test(pageId))
       .map((pageId) => ({
         params: {
           pageId
