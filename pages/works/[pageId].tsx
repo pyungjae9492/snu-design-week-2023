@@ -65,12 +65,16 @@ export async function getStaticPaths() {
 
   const siteMap = await getSiteMap()
 
+  const courses = ['brand', 'uiux', 'graphic', 'media', 'product-interaction', 'living', 'mobility', 'space']
+
   const staticPaths = {
-    paths: Object.keys(siteMap.canonicalPageMap).map((pageId) => ({
-      params: {
-        pageId
-      }
-    })),
+    paths: Object.keys(siteMap.canonicalPageMap)
+      .filter((pageId) => courses.includes(pageId.split('-')[0]))
+      .map((pageId) => ({
+        params: {
+          pageId
+        }
+      })),
     // paths: [],
     fallback: true
   }
