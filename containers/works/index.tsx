@@ -42,12 +42,6 @@ export const WorksContainer = (props) => {
     scrollRef.current.scrollTo(0, 0)
   }
 
-  useEffect(() => {
-    if (menu) {
-      setIsMenuOpen(false)
-    }
-  }, [])
-
   return (
     <div
       className={`w-full mx-auto lg:w-full lg:h-[calc(100vh-150px)] flex-col lg:flex lg:flex-row px-7 lg:px-10 sm:pb-20 overflow-y-hidden ${
@@ -103,6 +97,9 @@ export const WorksContainer = (props) => {
 
       <div
         className='max-w-[90vw] lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'
+        style={{
+          scrollBehavior: 'smooth'
+        }}
         ref={scrollRef}
       >
         <ProjectGallery {...notionProps} />
