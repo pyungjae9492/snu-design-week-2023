@@ -17,7 +17,7 @@ const team3 = "3. 행사 준비";
 const teamMates3 = "전시 전반 | 양준후 오혜윤\n번역 | 김구연";
 
 const team4 = "4. 제작";
-const teamMates4 = "웹사이트 개발 | DRMVSN\n현장 촬영 | TH STUDIO\n도록 인쇄 | 청산인쇄\n포스터 인쇄 | 청산인쇄\n굿즈 제작 | 관악실버에코";
+const teamMates4 = "웹사이트 개발 | Cuby Studio, SNULion\n현장 촬영 | 송채은\n도록 인쇄 | 필페이퍼\n포스터 인쇄 | 성원애드피아\n굿즈 제작 | 올댓프린팅, 신시어리";
 
 const ThanksToComponent: React.FC<{num: number, team: string, teamMates: string}> = ({num, team, teamMates}) => {
     return (
