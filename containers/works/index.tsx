@@ -9,13 +9,13 @@ import { ProjectGallery } from './fragments/ProjectGallery'
 export const WorksContainer = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [selectedMenu, setSelectedMenuState] = useState('ALL')
-
-  const notionProps = props[selectedMenu]
 
   const router = useRouter()
 
   const { menu } = router.query
+
+  const selectedMenu = menu ? (menu as string) : 'ALL'
+  const notionProps = props[selectedMenu]
 
   function setSelectedMenu(newMenu: string) {
     if (newMenu !== 'ALL') {
@@ -30,7 +30,6 @@ export const WorksContainer = (props) => {
       )
     }
     if (newMenu === 'ALL') {
-      setSelectedMenuState(newMenu)
       router.push(
         {
           pathname: '/works'
@@ -43,9 +42,9 @@ export const WorksContainer = (props) => {
 
   useEffect(() => {
     if (menu) {
-      setSelectedMenuState(menu as string)
+      setIsMenuOpen(false)
     }
-  }, [menu])
+  }, [])
 
   return (
     <div
