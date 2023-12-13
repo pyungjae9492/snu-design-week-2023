@@ -26,7 +26,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Pretendard-Regular', var(--notion-font);
+  font-family: 'Pretendard-Regular';
 }
 
 a {
@@ -42,10 +42,7 @@ html {
 }
 
 body {
-  --notion-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
-  font-family: var(--notion-font);
+  font-family: 'Pretendard-Regular';
   color: #fff;
   overflow-x: hidden;
 }

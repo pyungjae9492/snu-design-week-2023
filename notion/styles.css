@@ -1,8 +1,5 @@
 :root {
-  --notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont,
-    'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif,
-    'Segoe UI Emoji', 'Segoe UI Symbol';
-  --fg-color: rgb(55, 53, 47);
+  --fg-color: rgb(255, 255, 255);
   --fg-color-0: rgba(55, 53, 47, 0.09);
   --fg-color-1: rgba(55, 53, 47, 0.16);
   --fg-color-2: rgba(55, 53, 47, 0.4);
@@ -120,7 +117,6 @@
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
-  font-family: var(--notion-font);
 }
 
 .notion>* {
@@ -2424,7 +2420,6 @@ svg.notion-page-icon {
   line-height: 1.5;
   color: rgb(55, 53, 47);
   caret-color: rgb(55, 53, 47);
-  font-family: var(--notion-font);
 }
 
 .notion-search input {
@@ -2763,7 +2758,6 @@ svg.notion-page-icon {
 }
 
 .notion-collection-view-dropdown-content {
-  font-family: var(--notion-font);
   min-width: 220;
   background: #fff;
   border-radius: 6;
