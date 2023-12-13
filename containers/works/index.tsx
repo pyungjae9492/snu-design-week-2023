@@ -9,6 +9,7 @@ import { ProjectGallery } from './fragments/ProjectGallery'
 export const WorksContainer = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const scrollRef = React.useRef(null)
 
   const router = useRouter()
 
@@ -38,6 +39,8 @@ export const WorksContainer = (props) => {
         { shallow: true }
       )
     }
+    // scroll to top
+    scrollRef.current.scrollTo(0, 0)
   }
 
   useEffect(() => {
@@ -99,7 +102,10 @@ export const WorksContainer = (props) => {
         </div>
       </div>
 
-      <div className='max-w-[90vw] lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'>
+      <div
+        className='max-w-[90vw] lg:w-full lg:h-full lg:overflow-y-auto scrollbar-hide'
+        ref={scrollRef}
+      >
         <ProjectGallery {...notionProps} />
       </div>
     </div>
