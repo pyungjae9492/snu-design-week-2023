@@ -7,13 +7,12 @@ import { MobileMenuBar } from './fragments/MobileMenuBar'
 import { ProjectGallery } from './fragments/ProjectGallery'
 
 export const WorksContainer = (props) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const scrollRef = React.useRef(null)
-
   const router = useRouter()
 
   const { menu } = router.query
+  const [isMenuOpen, setIsMenuOpen] = useState(!menu)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const scrollRef = React.useRef(null)
 
   const selectedMenu = menu ? (menu as string) : 'ALL'
   const notionProps = props[selectedMenu]
