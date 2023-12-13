@@ -98,7 +98,7 @@ export const WorksContainer = (props) => {
         }}
         ref={scrollRef}
       >
-        {/* <ProjectGallery {...notionProps} /> */}
+        <ProjectGallery {...notionProps} />
       </div>
     </div>
   )
