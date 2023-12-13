@@ -55,7 +55,7 @@ export const MobileHeader = () => {
                 className={`${router.pathname.includes("works/") ? "fixed" : "sticky"} top-0 sm:p-6 ${router.pathname === "/" && "sm:pb-0"} p-10 w-full sm:flex hidden flex-row justify-between items-center z-50`}
             >
                 <div 
-                    className="fixed w-full h-[180px] -z-10 top-0 left-0"
+                    className={`fixed w-full h-[150px] -z-10 top-0 left-0 ${router.pathname === "/" && "invisible"}`}
                     style={{
                         background: "linear-gradient(180deg, rgba(0, 0, 0, 0.76) 41.18%, rgba(58, 58, 58, 0.00) 95.27%)",
                         pointerEvents: "none"
