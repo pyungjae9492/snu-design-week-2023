@@ -45,7 +45,7 @@ export const PCHeader = () => {
         return (
             <button 
                 className="h-fit"
-                onClick={() => router.push(`/${pageNameToPath}`)}
+                onClick={() => pageName === "Works" ? router.push(`/works?menu=ALL`) : router.push(`/${pageNameToPath}`)}
                 onPointerEnter={handleHover}
                 onPointerLeave={handleHover}
             >

@@ -27,7 +27,11 @@ export const MobileHeader = () => {
         
         const onClickNavButton = () => {
             toggleNavMenu()
-            router.push(pageNameToPath)
+            if (pageName === "Works") {
+                router.push("works?menu=ALL")
+            } else {
+                router.push(pageNameToPath)
+            }
         }
         return (
             <Image

@@ -13,34 +13,26 @@ export const WorksContainer = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(!menu)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const scrollRef = React.useRef(null)
-
+  
   const selectedMenu = menu ? (menu as string) : 'ALL'
   const notionProps = props[selectedMenu]
-
+  
   function setSelectedMenu(newMenu: string) {
-    if (newMenu !== 'ALL') {
-      // set selectedMenu to url query
-      router.push(
-        {
-          pathname: '/works',
-          query: { menu: newMenu }
-        },
-        undefined,
-        { shallow: true }
-      )
-    }
-    if (newMenu === 'ALL') {
-      router.push(
-        {
-          pathname: '/works'
-        },
-        undefined,
-        { shallow: true }
-      )
-    }
+    // set selectedMenu to url query
+    router.push(
+      {
+        pathname: '/works',
+        query: { menu: newMenu }
+      },
+      undefined,
+      { shallow: true }
+    )
+  }
+  
+  useEffect(() => {
     // scroll to top
     scrollRef.current.scrollTo(0, 0)
-  }
+  }, [selectedMenu])
 
   return (
     <div
@@ -51,12 +43,14 @@ export const WorksContainer = (props) => {
       <div className='lg:max-w-[50%] lg:h-full lg:mb-[72px] lg:flex-col lg:relative'>
         {/*sm메뉴*/}
         <div className='lg:hidden'>
-          <MobileMenuBar
-            isMenuOpen={isMobileMenuOpen}
-            setIsMenuOpen={setIsMobileMenuOpen}
-            selectedMenu={selectedMenu}
-            setSelectedMenu={setSelectedMenu}
-          />
+          {menu && (
+            <MobileMenuBar
+              isMenuOpen={isMobileMenuOpen}
+              setIsMenuOpen={setIsMobileMenuOpen}
+              selectedMenu={selectedMenu}
+              setSelectedMenu={setSelectedMenu}
+            />
+          )}
         </div>
         {/*lg메뉴*/}
         <div
@@ -79,12 +73,14 @@ export const WorksContainer = (props) => {
           </svg>
         </div>
         <div className='sm:hidden'>
-          <MenuBar
-            isMenuOpen={isMenuOpen}
-            setIsMenuOpen={setIsMenuOpen}
-            selectedMenu={selectedMenu}
-            setSelectedMenu={setSelectedMenu}
-          />
+          {menu && (
+            <MenuBar
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+              selectedMenu={selectedMenu}
+              setSelectedMenu={setSelectedMenu}
+            />
+          )}
         </div>
         {/*메뉴설명*/}
         <div className='lg:pl-8 lg:pr-[30px] lg:absolute lg:left-8 lg:right-[52px] lg:bottom-0'>
@@ -102,7 +98,7 @@ export const WorksContainer = (props) => {
         }}
         ref={scrollRef}
       >
-        <ProjectGallery {...notionProps} />
+        {/* <ProjectGallery {...notionProps} /> */}
       </div>
     </div>
   )

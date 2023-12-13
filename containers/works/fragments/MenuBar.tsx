@@ -30,7 +30,8 @@ export default function MenuBar(props) {
       <div
         onClick={() => {
           onSelectMenu(props.menu);
-          setFirstTime(false)}}
+          setFirstTime(false)
+        }}
         className='flex text-5xl cursor-pointer'
       >
         {props.menu}

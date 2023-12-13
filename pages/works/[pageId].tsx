@@ -174,7 +174,7 @@ export default function NotionDomainDynamicPage(props) {
         />
         <div 
           className='absolute top-32 left-10 cursor-pointer hidden lg:block'
-          onClick={() => router.push('/works')}
+          onClick={() => router.back()}
         >
           <Image 
             src="/back.png"

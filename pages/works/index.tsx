@@ -18,26 +18,26 @@ const SPACE_PAGE_ID = "SPACE-4a58162b0a6e46d2a9195636c113d9d3"
 
 export const getStaticProps = async () => {
   try {
-    const propsALL = await resolveNotionPage(domain, ALL_PAGE_ID)
-    const propsBRAND = await resolveNotionPage(domain, BRAND_PAGE_ID)
-    const propsUXUI = await resolveNotionPage(domain, UXUI_PAGE_ID)
-    const propsMEDIA = await resolveNotionPage(domain, MEDIA_PAGE_ID)
-    const propsGRAPHIC = await resolveNotionPage(domain, GRAPHIC_PAGE_ID)
-    const propsPRODUCT_INTERACTION = await resolveNotionPage(domain, PRODUCT_INTERACTION_PAGE_ID)
-    const propsLIVING = await resolveNotionPage(domain, LIVING_PAGE_ID)
-    const propsMOBILITY = await resolveNotionPage(domain, MOBILITY_PAGE_ID)
-    const propsSPACE = await resolveNotionPage(domain, SPACE_PAGE_ID)
+    // const propsALL = await resolveNotionPage(domain, ALL_PAGE_ID)
+    // const propsBRAND = await resolveNotionPage(domain, BRAND_PAGE_ID)
+    // const propsUXUI = await resolveNotionPage(domain, UXUI_PAGE_ID)
+    // const propsMEDIA = await resolveNotionPage(domain, MEDIA_PAGE_ID)
+    // const propsGRAPHIC = await resolveNotionPage(domain, GRAPHIC_PAGE_ID)
+    // const propsPRODUCT_INTERACTION = await resolveNotionPage(domain, PRODUCT_INTERACTION_PAGE_ID)
+    // const propsLIVING = await resolveNotionPage(domain, LIVING_PAGE_ID)
+    // const propsMOBILITY = await resolveNotionPage(domain, MOBILITY_PAGE_ID)
+    // const propsSPACE = await resolveNotionPage(domain, SPACE_PAGE_ID)
 
     const props = {
-      "ALL": propsALL,
-      "BRAND": propsBRAND,
-      "UX/UI": propsUXUI,
-      "MEDIA": propsMEDIA,
-      "GRAPHIC": propsGRAPHIC,
-      "PRODUCT INTERACTION": propsPRODUCT_INTERACTION,
-      "LIVING": propsLIVING,
-      "MOBILITY": propsMOBILITY,
-      "SPACE": propsSPACE,
+      // "ALL": propsALL,
+      // "BRAND": propsBRAND,
+      // "UX/UI": propsUXUI,
+      // "MEDIA": propsMEDIA,
+      // "GRAPHIC": propsGRAPHIC,
+      // "PRODUCT INTERACTION": propsPRODUCT_INTERACTION,
+      // "LIVING": propsLIVING,
+      // "MOBILITY": propsMOBILITY,
+      // "SPACE": propsSPACE,
     }
 
     return { props, revalidate: 10 }
